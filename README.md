@@ -21,7 +21,7 @@ The repository contains the GitHub page's code, project boards (for Content and 
 - Velo, Christian Paul
 - Verzola, Pio Jr
 - Villanueva, Cyrille
-- Yacat, Ma. Xenia
+- Yacat, Ma. Xenia D.
 - Yango, Peter Samuel 
 
 # Credentials
