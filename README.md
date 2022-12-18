@@ -15,7 +15,7 @@ The repository contains the GitHub page's code, project boards (for Content and 
 ## Active Team Members
 - Timon, Patricia Mae
 - Tomacruz, Jana Denise
-- Torres, Aleah
+- Torres, Aleah B.
 - Tupan, Charleigh Belle
 - Umali, Marianne
 - Velo, Christian Paul
