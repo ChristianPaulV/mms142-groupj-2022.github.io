@@ -15,13 +15,15 @@ The repository contains the GitHub page's code, project boards (for Content and 
 ## Active Team Members
 - Timon, Patricia Mae
 - Tomacruz, Jana Denise
-- Torres, Aleah B.
+- Torres, Aleah
 - Tupan, Charleigh Belle
 - Umali, Marianne
-- Velo, Christian Paul
+- Velo, Christian Paul R.
 - Verzola, Pio Jr
 - Villanueva, Cyrille L.
 - Yacat, Ma. Xenia D.
+
+## Partially Active Team Members
 - Yango, Peter Samuel 
 
 # Credentials
