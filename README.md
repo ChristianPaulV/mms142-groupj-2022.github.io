@@ -12,6 +12,9 @@ The repository contains the GitHub page's code, project boards (for Content and 
 - [Projects](https://github.com/JanaDenise/mms142-groupj-2022.github.io/projects?query=is%3Aopen)
 - [Wiki](https://github.com/JanaDenise/mms142-groupj-2022.github.io/wiki)
 
+# Project Details
+The web page was created in a 3840x2160 screen. As such, images may be wrongly displayed under different screen resolutions.
+
 ## Active Team Members
 - Timon, Patricia Mae
 - Tomacruz, Jana Denise
