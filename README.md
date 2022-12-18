@@ -16,7 +16,7 @@ The repository contains the GitHub page's code, project boards (for Content and 
 The web page was created in a 3840x2160 screen. As such, images may be wrongly displayed under different screen resolutions.
 
 ## Active Team Members
-- Timon, Patricia Mae
+- Timon, Patricia Mae P.
 - Tomacruz, Jana Denise
 - Torres, Aleah
 - Tupan, Charleigh Belle O.
