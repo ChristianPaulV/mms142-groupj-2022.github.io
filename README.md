@@ -16,7 +16,7 @@ The repository contains the GitHub page's code, project boards (for Content and 
 - Timon, Patricia Mae
 - Tomacruz, Jana Denise
 - Torres, Aleah
-- Tupan, Charleigh Belle
+- Tupan, Charleigh Belle O.
 - Umali, Marianne
 - Velo, Christian Paul R.
 - Verzola, Pio Jr
