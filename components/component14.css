@@ -1,0 +1,27 @@
+.component14-container {
+  display: flex;
+  position: relative;
+}
+.component14-text {
+  font-size: 22px;
+  max-width: 1400px;
+  text-align: justify;
+  font-family: Poppins;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.component14-text01 {
+  font-size: 25px;
+  font-weight: 700;
+}
+@media(max-width: 991px) {
+  .component14-text {
+    max-width: 100%;
+  }
+}
+@media(max-width: 767px) {
+  .component14-text {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+}

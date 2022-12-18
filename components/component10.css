@@ -1,0 +1,24 @@
+.component10-container {
+  display: flex;
+  position: relative;
+}
+.component10-text {
+  max-width: 1400px;
+  margin-top: 32px;
+  text-align: justify;
+  margin-bottom: 32px;
+}
+.component10-link {
+  text-decoration: underline;
+}
+@media(max-width: 991px) {
+  .component10-text {
+    max-width: 100%;
+  }
+}
+@media(max-width: 767px) {
+  .component10-text {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+}

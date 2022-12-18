@@ -1,0 +1,8 @@
+.component4-container {
+  display: flex;
+  position: relative;
+}
+.component4-video {
+  width: 320px;
+  height: 183px;
+}

@@ -1,0 +1,10 @@
+.component6-container {
+  display: flex;
+  position: relative;
+}
+.component6-div {
+  width: 698px;
+  height: 1045px;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+}

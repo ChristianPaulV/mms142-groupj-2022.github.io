@@ -1,0 +1,8 @@
+.component1-container {
+  display: flex;
+  position: relative;
+}
+.component1-text {
+  color: var(--dl-color-gray-500);
+  align-self: flex-start;
+}

@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BEYOND-GENERATION - AI in Art</title>
+    <meta property="og:title" content="BEYOND-GENERATION - AI in Art" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Open Sans;
+        font-size: 18px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+      html {
+      scroll-behavior: smooth;
+      }
+    </style>
+    <style data-section-id="dropdown">
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html@0.1.11/dist/default/lib.umd.js"
+      ></script>
+      <link href="./b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n.css" rel="stylesheet" />
+
+      <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container">
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-navbar">
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-logo">
+            <img
+              alt="image"
+              src="public/playground_assets/artboard%201-400w.png"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-image"
+            />
+          </div>
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-links-container">
+            <a
+              href="index.html"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link Anchor"
+            >
+              HOME
+            </a>
+            <a
+              href="d-e-e-p-d-i-v-e.html"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link01"
+            >
+              DEEP DIVE
+            </a>
+            <a
+              href="d-i-s-r-u-p-t-o-n.html"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link02"
+            >
+              <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text">
+                DISRUPT: OFF
+              </span>
+              <br />
+            </a>
+            <a
+              href="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n.html"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link03"
+            >
+              BEYOND
+            </a>
+            <a
+              href="r-e-f-e-r-e-n-c-e-s.html"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link04"
+            >
+              REFERENCES
+            </a>
+          </div>
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-cta-container">
+            <div
+              data-role="BurgerMenu"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-burger-menu"
+            >
+              <svg
+                viewBox="0 0 1024 1024"
+                class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-icon"
+              >
+                <path
+                  d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            data-role="MobileMenu"
+            class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-mobile-menu"
+          >
+            <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-top">
+              <img
+                alt="image"
+                src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
+                class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-image1"
+              />
+              <div
+                data-role="CloseMobileMenu"
+                class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container01"
+              >
+                <svg
+                  viewBox="0 0 1024 1024"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-icon02"
+                >
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-mid">
+              <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-links-container1">
+                <a
+                  href="#features"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link05 Anchor"
+                >
+                  features
+                </a>
+                <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link06 Anchor">
+                  services
+                </span>
+                <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link07 Anchor">
+                  About Us
+                </span>
+                <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link08 Anchor">
+                  contact
+                </span>
+              </div>
+              <button
+                class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-cta-btn button Anchor"
+              >
+                sTART BUILDING
+              </button>
+            </div>
+            <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-bot">
+              <div
+                class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-social-links-container"
+              >
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-icon04"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-icon06"
+                >
+                  <path
+                    d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-icon08"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="Landing Page - Beyond Generation"
+          class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner"
+        >
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text002">
+            Beyond Generation
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text003">
+            Peek at the larger picture and the future of AI Image Generation
+          </span>
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-separator"></div>
+          <nav class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-nav"></nav>
+        </div>
+        <div
+          id="On AI Image Generation VS Professionals"
+          class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner01"
+        >
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text004">
+            <span>On AI Image Generation</span>
+            <br />
+            <span>vs Professionals</span>
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text008">
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text009">
+              Would AI-generated art be considered a different category of art?
+              A different art style? Would this open doors to people who don’t
+              find themselves to be artistically inclined but would know a good
+              artwork when they see one?
+            </span>
+            <span>&nbsp;</span>
+            <span>
+              An article featured an AI-generated image winning a competition.
+              The winner was also interviewed and featured in the news.
+            </span>
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+          <div>
+            <dangerous-html
+              html="<html>
+    <body>
+        <iframe width='560' height='315' src='https://www.youtube.com/embed/yYTjyfYb0qY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+        </body>
+</html>"
+            ></dangerous-html>
+          </div>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text015">
+            Next 9NEWS (2022): AI-generated art piece takes first at the state
+            fair
+          </span>
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container02"></div>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text016">
+            <span>
+              When Jason M. Allen, the winner of the competition, posted his
+              three art entries online, it garnered a lot of protests from
+              artists. They seem to claim that he cheated, that he was not an
+              artist as it was made by a robot, likening it to a “Banana taped
+              to a wall”. Allen disagrees, saying that he put a lot of work and
+              effort into his art and that it wasn’t an easy process at all,
+              claiming to put in over 80 hours of work into it, even needing to
+              edit the final drafts before he could submit them as entries
+              (Metz, 2022).
+            </span>
+            <br />
+            <br />
+            <span>
+              Would this mean there would be an emergence of different kinds of
+              artists? One that is neither traditional nor digital but something
+              else entirely? An artist who uses AI-generated images from prompts
+              and others to create artwork—an AI artist? A prompt engineer?
+            </span>
+            <br />
+            <br />
+            <span>
+              But are they really artists if they didn’t do the heavy lifting
+              that the AI is doing? There really isn’t such a term as “AI
+              artists” because these people aren’t considered artists at all. If
+              they aren’t artists, should their “works” be considered art? Would
+              AI-generated art create an entirely new category in the art world?
+            </span>
+            <br />
+            <br />
+            <span>
+              Another article featured an artist who created a children’s book
+              through the use of artificial intelligence tools, ChatGPT,
+              MidJourney, and others. It garnered a bit of backlash from people,
+              saying that he was plagiarizing, questioning his expertise in
+              writing children’s books, and even claiming that the whole book
+              was not his work as it was all made by an AI. At the end of the
+              article, the artist in question did acknowledge the concerns that
+              various people had about the tools he used to create his work
+              (Endicott, 2022).
+            </span>
+            <br />
+            <br />
+            <span>
+              Apart from the implication of AI supposedly competing with human
+              artists and the perceived threat to the job security of artists,
+              there is also the ethical sphere that we may have to contend with.
+              An example that garnered the concern of many was the incident
+              wherein the style of the late artist Kim Jung Gi, well known for
+              his photographic memory and freehand-inked works, was fed into an
+              AI Image Generator to produce works that imitate Kim Jung Gi’s
+              style. The backlash could be attributed to how untimely or
+              distasteful the act was as the famous artist had only recently
+              passed away when the AI-generated images were released. However,
+              many artists, big or small, fear their works are being
+              unceremoniously referenced by AI without their permission, which
+              they view as “
+            </span>
+            <a href="#copyright" class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link09">
+              art theft
+            </a>
+            <span>”(Foley, 2022).</span>
+            <br />
+            <br />
+            <span>
+              This point could be counter-argued that a human artist similarly
+              references others too when creating an illustration/image, as
+              renowned American filmmaker Jim Jarmusch says that “Nothing is
+              original.” Adam Duff, better known as LUCIDPIXUL, argues that
+              while the use of AI in itself is harmless, it is said that only
+              when AI image generation is used to “hijack” the identity of an
+              artist is it when it truly “crosses the line” (Duff, 2022).
+            </span>
+            <br />
+            <br />
+          </span>
+          <span
+            id="img gen vs prof"
+            class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text036"
+          >
+            <span>
+              Duff insists that while an artist cannot claim or legally enforce
+              an art style, the style of an artist is tied to their own
+              identity. When an artist admires a master he/she/they would
+              imitate or study the master’s work, as it made an impression on
+              the artist. Can we say that the artist is engaging in unethical
+              behavior? If we abide by Duff’s statement then the answer would be
+              no (Duff, 2022).This back and forth between the pros and the
+              nay-sayers can go on for eternity, as such the ethical concern
+              will be a pressing matter while a consensus is still being
+              debated.
+            </span>
+            <span></span>
+            <br />
+          </span>
+        </div>
+        <div
+          id="On Copyright Infringement and Intellectual Property Rights"
+          class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner02"
+        >
+          <h1 id="copyright" class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text040">
+            On Copyright Infringement and Intellectual Property Rights
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text041">
+            Concerning copyright infringement and Intellectual Property rights
+            (IP), a few important questions have to be addressed.
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text042">
+            <br />
+            <span>
+              There are users on various social media platforms concerned with
+              “art theft”, as AI-generated images are taking aspects of their
+              and others’ artworks and “mixing” it all together to form a
+              singular artwork.
+            </span>
+            <br class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text045" />
+            <br class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text046" />
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text047">
+              Do AI Image Generators “steal?”
+            </span>
+            <br />
+            <span>
+              There are users on various social media platforms concerned with
+              “art theft”, as AI-generated images are taking aspects of their
+              and others’ artworks and “mixing” it all together to form a
+              singular artwork.
+            </span>
+            <br />
+            <br />
+            <span>
+              Using the wealth of information present in our discussion of
+            </span>
+            <a
+              href="d-e-e-p-d-i-v-e.html"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-navlink"
+            >
+              AI Image Generation
+            </a>
+            <span>
+              , data that is curated by the developers of an AI tool to make a
+              dataset—sometimes including images that you post online—are used
+              as training data to for the AI Image Generator to create entirely
+              new images from scratch, i.e., a novel image.
+            </span>
+            <br />
+            <br />
+            <span>
+              In short, AI Image Generators do not steal existing artworks but
+              instead, use them as inspiration in the way that a human artist
+              would. At the end of the day, AI is supposed to mimic human
+              behavior.
+            </span>
+            <br />
+            <br />
+            <span>
+              However, cases of art theft could technically occur if a dataset
+              that is fed onto an AI Image Generator contains copyrighted
+              images. For example, Plunkett (2022) discussed a situation wherein
+              an AI Image Generator is fed with copyrighted images that have
+              their watermarks and signatures erased. Cases like this argue for
+              the need for regulation of AI Image Generation to prevent further
+              damage both to its users and AI as a whole.
+            </span>
+            <br />
+            <br />
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text062">
+              Are AI-generated images protected by Copyright infringement?
+            </span>
+            <br />
+            <span>
+              Copyright protection only applies to human authors. By the letter
+              of the law, one cannot claim copyright protection for an AI
+              because the AI is a non-human entity and is not recognized as a
+              legal person. Therefore, the question then becomes should the
+              copyright extend to the user who “created” the artwork through the
+              use of an AI image generator? But then again, who gets credited
+              for the artwork?
+            </span>
+            <br />
+            <br />
+            <span>
+              Epstein et al. (2020) tackled this set of questions and their
+              answer was “it’s complicated”. The results of the research were
+              not straightforward and there was no solid designation of who
+              owned the art or not but a “hierarchy of accountability” was
+              provided.
+            </span>
+            <br />
+            <br />
+            <span>
+              At the top of the hierarchy is the artist (person who takes
+              inspiration/references/samples from the crowd and creates art
+              using the generative AI software), then followed by the
+              technologist (person who created the software), and finally the
+              crowd (people who create the inspiration/references/samples that
+              the artist uses).
+            </span>
+            <br />
+            <br />
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text073">
+              Who owns the copyright for AI-generated artwork?
+            </span>
+            <br />
+            <span>
+              It would depend on the country where the art was created as each
+              handles copyright protection differently. It is actually not
+              unusual for the copyright owner to be different from the creator
+              of the work.
+            </span>
+            <br />
+            <br />
+            <br />
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text079">
+              According to an article by Marchi (2022), copyright is determined
+              on a case-by-case basis:
+            </span>
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text080">
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text081">
+              1. Work for hire.
+            </span>
+            <span>
+              Since works that are made within the duties of the employment or
+              under a specific agreement belong to the employer/commissioner
+              (unless otherwise agreed), the copyright usually belongs to the
+              client or company who the work was made for.
+            </span>
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text083">
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text084">
+              2. Assignment/license of copyright.
+            </span>
+            <span>
+              The copyright owner may sell or license the rights to someone else
+              through an assignment. This often occurs with musicians who are
+              under contract with major record labels, or with writers and
+              publishing houses.
+            </span>
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text086">
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text087">
+              3. No Copyright Owner.
+            </span>
+            <span>
+              &nbsp;There may have been no copyright at all, or the copyright
+              may have expired (to the so-called public domain).
+            </span>
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text089">
+            <span>
+              AI-generated work, however, has a tendency to not be protected by
+              copyright due to a present lack of regulations (as with all
+              new/breakthrough technologies). The two solutions offered to this
+              problem are to treat AI as either Work for hire or, if that option
+              is not possible, treat the AI-generated images as a product for
+              the consumer.
+            </span>
+            <br />
+            <br />
+            <span>
+              Regardless, however, this issue about IP needs to be officially
+              addressed at some point. Preferably as soon as possible as it
+              seems that AI-generated content will continue to become more
+              popular, especially among big enterprises.
+            </span>
+            <br />
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div
+          id="On Sexualized AI-Generated Images"
+          class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner03"
+        >
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text098">
+            <span>On Sexualized AI-Generated Images</span>
+            <br />
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text101">
+            <span>
+              The problem with making AI-generated art is the fact that anyone
+              can use it, and technology isn’t infallible. Even with filters, we
+              can see that people are able to bypass the safety filters of
+              Stable Diffusion thanks to this
+            </span>
+            <a
+              href="https://www.reddit.com/r/StableDiffusion/comments/wv2nw0/tutorial_how_to_remove_the_safety_filter_in_5/"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link10"
+            >
+              Reddit post
+            </a>
+            <span>from the creators themselves.</span>
+            <br />
+            <br />
+            <span>
+              Art theft and invasive data gathering are certainly ethically
+              concerning when it comes to AI Image Generation, but none is more
+              concerning and more pressing than the fact that these images can
+              be sexualized. It does not even have to be with open-source apps
+              like Stable Diffusion. Lensa’s AI was caught generating NSFW
+              content with images from users who were unaware of their
+              likenesses being used in such works (Tangalakis-Lippert, 2022). It
+              even came to a point where One user’s childhood photos were used
+              in creating such content (Snow, 2022).
+            </span>
+            <br />
+            <br />
+            <span>
+              While there are filters and restrictions for such images to be
+              generated, it does not seem to be heavily enforced or regulated
+              which is concerning as such things could become issues that the
+              media could exaggerate when left unchecked (Vincent, 2022)— which
+              would have an impact on the company/brand/creator of the
+              application and possibly, in general, the creative freedom of
+              users online.
+            </span>
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div
+          id="On Art Theft and Bad Actors"
+          class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner04"
+        >
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text113">
+            <span>On Art Theft and Bad Actors</span>
+            <br />
+          </h1>
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container03">
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text116">
+              <span>
+                The ethical ramifications of AI-generated images are concerning
+                and their potential to change society, its laws, and bylaws
+                around the internet, and Netiquette is huge. Jiang (2022)
+                presented an article wherein an art thief “captured” an ongoing
+                Livestream of an artist’s painting, then proceeded to use an AI
+                Image Generator to finish the work before the artist did so.
+              </span>
+              <br />
+              <br />
+              <span>
+                A repeat of a similar situation could be an influential factor
+                for artists to eventually avoid posting WIPs (work-in-progress
+                art) or streaming their work in the future. Thankfully, the
+                thief did not get away with it, but it has still set a precedent
+                in the art world.
+              </span>
+              <br />
+              <br />
+              <span>The following speculative situations may also occur:</span>
+              <br />
+              <br />
+              <span>
+                • Streaming one’s work is one of the few ways an artist can
+                interact with their audience and patrons. Changing Livestreaming
+                behavior could effectively remove this line of communication
+                between artist and audience.
+              </span>
+              <br />
+              <span>
+                • A start of a movement consisting of artists encouraging other
+                artists to archive their art streams if they have any (i.e.,
+                change in artistic process). If this becomes a demand in the
+                future, new applications or social media websites—that are
+                dedicated to recording and archiving artwork—could pop up.
+              </span>
+              <br />
+              <br />
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </div>
+        <div
+          id="On NEXT-GEN Artificial Intelligence"
+          class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner05"
+        >
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text133">
+            On NEXT-GEN Artificial Intelligence
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text134">
+            <span>
+              The following section will speculate the future of development in
+              Artificial Intelligence.
+            </span>
+            <br />
+            <br />
+            <span>
+              For future enterprise and consumer applications, there are at
+              least three possible ways in which AI tools will be embedded. It
+              can be either through standalone AI products that work under a
+              cloud-processing model (similar to Adobe Creative Cloud) or as
+              individual AI tools implemented as features into already popular
+              image/video processing tools (such as what AI-enabled features
+              Blender is fast incorporating into its menu options). A third
+              option, which is already happening but will become more
+              sophisticated, is for AI platforms to allow AI-enhanced browsers
+              (ergo, the wider public) to access its functions.
+            </span>
+            <br />
+            <br />
+            <span>
+              Still beyond these “just-around-the-corner” tools, visionary AI
+              developers are also aiming for AI-powered operating systems, and
+              AI-powered features as well within application suites that are not
+              specifically just for image/video processing but for a wider range
+              of user needs (e.g. imagine an AI-powered Microsoft Office or
+              AI-powered Google Maps/Google Earth).
+            </span>
+            <br />
+            <br />
+            <span>
+              With these predictions, further questions can be asked such as
+              which AI startups can be the “disruptors?” Will OpenAI,
+              forerunners in the explosive race among AI Image Generators,
+              remain as the “to-be disrupted?” Until when before another
+              disruptive innovation will heavily affect AI (similar to the
+              Internet giving AI developers more accessible and larger
+              datasets)? Out of all these questions, perhaps the most important
+              one is how will AI tools further develop in terms of acquiring
+              more functionalities.
+            </span>
+            <br />
+            <br />
+            <span>
+              To answer the last question, it is imperative to take note of a
+              September 2022 discussion between the CEO of OpenAI, Sam Altman,
+              with Hoffman Reid.
+            </span>
+            <br />
+            <br />
+            <span>
+              The 2022 discussion of Reid and Altman begins with the OpenAI CEO
+              describing AI as a “genuine technological revolution” consisting
+              of tools to “significantly augment human ideas and workflows on an
+              everyday basis.” Altman proceeded to describe the successful AI
+              models as a “foundational platform” from which numerous
+              advancements would be made “across all industries [followed by] an
+              explosion of new companies.”
+            </span>
+            <br />
+            <br />
+            <span>
+              In other words, Altman is referring to AI’s crucial role across
+              the board, in all kinds of derivative technologies and
+              applications (Reid &amp; Altman, 2022 Sep 13). But certainly the
+              sudden mushrooming of AI art generators just this year (2022), and
+              the enthusiastic response of millions of users (not just artists)
+              getting on board within the span of a few months, is enough
+              validation of his claim—this is not a flash in the pan.
+            </span>
+            <br />
+            <br />
+            <span>
+              Altman also likened the overall impact of AI (including AI Image
+              Generators) to the introduction and popularization of cellular
+              mobile phone usage in the 1990s (Reid &amp; Altman, 2022 Sep
+              13)—which is too modest of a comparison. The AI Text-to-Image
+              revolution should rather be compared to that of the global
+              explosion of the Internet from the 1990s onward.
+            </span>
+            <br />
+            <br />
+            <span>
+              Finally, in discussing the future of AI tools, Altman sees
+              “massive leaps forward” in at least two areas for improvement in
+              general AI capabilities, both of which will clearly fuel more
+              advances in AI Image Platforms: (1) in large language models, and
+              (2) in “multimodal models that move between image and language.”
+            </span>
+            <br />
+            <br />
+            <span>
+              Large language models, such as OpenAI’s GPT family, are crucial
+              because they allow millions of Internet users (many of them with
+              no familiarity with the likes of Adobe software) to use natural
+              language, almost to loosely chat with the GPT and, based on that
+              interaction, to give iterative instructions or suggestions to the
+              AI image platform, causing it to generate amazing arrays of images
+              and variations of images. The resounding success of platforms such
+              as MidJourney, Dall-E, and Stable Diffusion, all rely on these
+              large language models (Reid &amp; Altman, 2022 Sep 13).
+            </span>
+            <br />
+            <br />
+            <span>
+              For Altman, Language models in the near future will use better and
+              better algorithms, even potentially to the point where its AI
+              capabilities may even outrun the availability of fresh data and
+              higher computational power (Reid &amp; Altman, 2022 Sep 13).
+            </span>
+            <br />
+            <br />
+            <span>
+              For the concept of multimodal models, Altman also foresees AI
+              models with the capacity to shift more seamlessly from one
+              multimedia mode to another. “We will get true multimodal models
+              working—not just text and images but every modality you have in
+              one model is able to easily fluidly move between things” (Reid
+              &amp; Altman, 2022 Sep 13). In fact, developers in the field of 3D
+              Augmented Reality and Virtual Reality (3D AR/VR)—now often called
+              Extended Reality or XR—are already seeing the arrival of AI
+              components packaged as “autonomous smart agents” (virtual humans
+              or humanized objects) in the round, with which we humans can
+              interact not just via text and images, but via speech, facial and
+              bodily gestures, and other modalities.
+            </span>
+            <br />
+            <br />
+            <span>
+              As early as during the SIGGRAPH Asia workshop in 2017, the
+              question was already posed and discussed: "what would happen when
+              artificial worlds start to think, and how we humans can interact
+              and communicate with AI through e.g. affective interfaces?"
+              (Lugmayr et al., 2017).
+            </span>
+            <br />
+            <br />
+            <span>
+              By 2021, a systematic review of recent tech literature revealed
+              that “36 published records containing AI-XR combinations”
+              indicated the use of such specific combinations in medical and
+              surgical training, autonomous vehicles and robotics, military
+              applications, gaming environments, and entertainment (Reiners et
+              al., 2021).
+            </span>
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner06">
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text178">
+            <span>On AI and Creative</span>
+            <br />
+            <span>Industries as a whole</span>
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text182">
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text183">
+              Technological innovations in art: parallels in recent (19th and
+              20th-century) history
+            </span>
+            <br class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text184" />
+            <span>
+              Just limiting ourselves to the visual arts, we can cite at least
+              four well-known technologies that revolutionized the way we as
+              human societies record, represent, and enrich our lives through
+              visual media that we value for its cultural-aesthetic as well as
+              functional-artisan content and form.
+            </span>
+            <br />
+            <br />
+            <span>
+              These are (a) photography, (b) cinema/video, (c) basic digital
+              image/video processing, and (d) online/interactive multimedia. In
+              each case, the core of these technologies were clearly disruptive
+              innovations in what we can now collectively refer to as “creative
+              industries”. They were disruptive, not just in reshaping the
+              creative businesses and professions whose careers and incomes
+              derived from these fields, but also in reshaping the general
+              public’s artistic and consumer habits and tastes. As we step on
+              the threshold of the AI-art era, it is instructive to review these
+              earlier technologies.
+            </span>
+            <br />
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text193">
+            <span>a.</span>
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text195">
+              Photography.
+            </span>
+            <span>
+              Before photography, the dominant fields of visual media were
+              painting, sculpture, and related arts and crafts, which included
+              engraving, lithography, and more recent printing processes.
+              Photography, at first a curiosity practiced by early 19th-century
+              nerds, soon created its own industrial behemoths and
+              artistic/consumer products and tastes. As photography became more
+              accessible, especially in tandem with the print industries, its
+              associated products, professions, and businesses eventually
+              replaced (or marginalized, or pushed into specialized niches) the
+              formerly more prominent types of visual arts and crafts. Once
+              color photography tied up with glossy high-quality printing
+              processes, the works of the masters–from Mesopotamia to the Mona
+              Lisa to Mondrian–were almost as enjoyable to the ordinary public
+              as to Louvre tourists.
+            </span>
+            <br />
+            <br />
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text199">
+            <span>b.</span>
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text201">
+              Cinema and video
+            </span>
+            <span>
+              . Before long, photography branched off into film/cinema, then
+              video. This new set of technological innovations created yet
+              previously unheard-of artistic/consumer products and tastes, and
+              newer professions and business behemoths that catered to the
+              demand. Again, as cinema and video became part of powerful mass
+              media, they replaced (or marginalized, subsumed, or tied up with)
+              such similar but older modes of cultural expression as theater,
+              concerts, and other live spectacles (e.g. circuses, traveling
+              shows). Hollywood, a sleepy outback town in the early 20th
+              century, came to represent the global power of cinema and the
+              cultures and lifestyles it represented.
+            </span>
+            <br />
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text204">
+            <span>d.</span>
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text206">
+              Early 21st-century innovations
+            </span>
+            <span>
+              . From the 2000s onwards, we have seen a series of massive
+              explosions in which advances in digital tech played a huge role in
+              overhauling visual arts and modes of expression, via:
+            </span>
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text208">
+            <span>e.&nbsp;</span>
+            <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text210">
+              Basic digital image/video processing.
+            </span>
+            <span>
+              Throughout the 1970s-1990s, digital tech began to show its
+              potential to revolutionize visual media and arts in various ways.
+              Small and separate streams of innovation gradually converged into
+              what became a gigantic river by the late 1990s.
+            </span>
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text212">
+            <span>
+              • Public access to online multimedia (e.g. YouTube, TikTok, cloud
+              computing, massive online databases);
+            </span>
+            <br />
+            <span>
+              •&nbsp;Cinematic extensions via motion capture, realistic 3D
+              animation, miniature cameras built into drones, etc.
+            </span>
+            <br />
+            <span>
+              •&nbsp;Initial use of AI-enhanced functions embedded into smart
+              digital tools, many of them open-source (e.g. Blender)
+            </span>
+            <br />
+            <span>
+              •&nbsp;Massive expansion in ways that visual products are
+              commodified, distributed, and consumed: cinema SFX,
+              streaming-video pay sites (e.g. Netflix), ultra-realistic video
+              games blending into VR, online libraries of high-res photos and 3D
+              models, even so-called “non-fungible tokens” (NFTs).
+            </span>
+            <br />
+            <span>
+              • The capacity to convert analog to digital images via optical
+              scanners.
+            </span>
+            <br />
+            <span>
+              • Direct-to-digital production via graphics applications (e.g.
+              Corel and Adobe) and digital cameras.
+            </span>
+            <br />
+            <span>
+              • High resolutions, more efficient formats, smart filters, and
+              higher-capacity PCs, digicams, storage media, and displays and
+              printers, that could enhance, manipulate and display digital
+              images and video with better results.
+            </span>
+            <br />
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text227">
+            <span>
+              One result, as most of us know by now, is that photography and
+              videography are no longer the exclusive turfs of highly trained
+              professionals with specialized gear, but a common arena of
+              creativity where anyone with a decent cellphone camera and editing
+              app can compete.
+            </span>
+            <br />
+            <br />
+            <span>
+              The parallels that we see in these four giant leaps of technology
+              affecting visual media and arts, we think, are logically and
+              historically connected enough to expect a fifth giant leap to
+              generate similar impacts in the creative industries, in the
+              general public’s consumer-artistic tastes and habits, and indeed,
+              in the value assigned by entire societies to artistic work in
+              general.
+            </span>
+            <br />
+          </span>
+          <ul class="list"></ul>
+        </div>
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner07">
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text233">
+            <span>Medium-term impacts of AI innovations on the</span>
+            <br />
+            <span>creative industries</span>
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text237">
+            <span>
+              As we tried above to retrace the interaction of technology and
+              art, we now realize more fully that the human artistic creative
+              process is both intimately personal and deeply social in
+              character. Artists don’t live isolated in ivory towers or
+              insulated in a vacuum, but as part of the wider society where they
+              are affected by the multi-faceted impacts of technology,
+              economics, politics, and culture.
+            </span>
+            <br />
+            <br />
+            <span>
+              There is some basis for the growing concern that AI-driven art
+              tools will destroy the personal touch and the artists’ work as
+              individuals (which was, by the way, a value enshrined by the
+              Renaissance but not in prior eras). There is indeed the risk that
+              these AI tools would turn the creative process into a big profit
+              machine controlled by big business (which in many fields today it
+              already is, anyway). But there are also the new potentials of the
+              same creative process becoming more socialized if not
+              collectivized in character, while small innovative groups and
+              individuals use the same AI tools to remain independent and
+              competitive.
+            </span>
+            <br />
+            <br />
+            <span>
+              Generally, technology (especially modern information technology)
+              empowers society to maximize its many modes of communication and
+              self-expression. Society’s creative output is thereby increased
+              multiple times. Formerly elitist art becomes an arena that more
+              people can engage in, enjoy, and share. Anyone with access to AI
+              tools today can become an “instant artist” – in much the same way
+              that 10-20 years ago, anyone with access to a digital camera could
+              become an “instant photographer/videographer.” (Also, in roughly
+              similar positions, did the early photographers become “instant
+              painters”, to the chagrin of professionally acclaimed painters.)
+            </span>
+            <br />
+            <br />
+            <span>
+              But will the tsunami of massively produced AI art cheapen the
+              value of art in general or the specific works of individual
+              artists? Even tech-savvy digital artists who have joined the
+            </span>
+            <a
+              href="#img gen vs prof"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link11"
+            >
+              growing debate on this
+            </a>
+            <a
+              href="#img gen vs prof"
+              class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link12"
+            >
+              issue.
+            </a>
+            <br />
+            <br />
+            <span>
+              What is definite, however, is that there will be growing pains
+              that must be promptly addressed, at least minimized and remedied
+              if not fully resolved. These include violations of intellectual
+              property rights (IPR), of rules against plagiarism, and laws and
+              ethical standards on pornography and identity forgery as these are
+              currently defined and widely observed.
+            </span>
+            <br />
+            <br />
+            <span>
+              As seen in our review of past innovations, the growth in art
+              production fuelled similar growth in its economic aspects:
+            </span>
+            <br />
+            <br />
+            <span>
+              • more people (with varied skills) and businesses (of varying
+              size) engage in art production for their incomes or profit;
+            </span>
+            <br />
+            <span>
+              • more art-laden products turn into commodities and command their
+              own prices, reflecting high demand;
+            </span>
+            <br />
+            <span>
+              • businesses engaged in art production and distribution (what we
+              now call the creative industries) proliferate to respond to the
+              fast-growing demand;
+            </span>
+            <br />
+            <span>
+              • consumer-artistic habits and tastes are influenced by the new
+              products, even reshaped drastically by the success of certain
+              creative works (especially when pushed by dominant cultural forces
+              and corporate advertising).
+            </span>
+            <br />
+            <br />
+            <span>
+              In other words, value chains grow and become more elaborate within
+              the main creative industries and in related professions, if only
+              because art production becomes more sophisticated, and now
+              involves more technology and collective/collaborative work. Just
+              think how many in-house art production crews and outsourced art
+              services are involved in the production of a single Marvel or DC
+              blockbuster.
+            </span>
+            <br />
+            <br />
+            <span>
+              Reid and Altman (2022, Sept 13) explored the probable
+              restructuring of industries impacted by AI as a whole,
+              particularly in the use of AI models and platforms:
+            </span>
+            <br />
+            <br />
+            <span>
+              • There will be “a small handful of fundamental large [AI] models”
+              that will allow APIs to be built on top of them.
+            </span>
+            <br />
+            <span>
+              • There will be a middle layer of startup AI-based companies that
+              don’t need to “reinvent the wheel” (i.e., develop and train their
+              own AI models) but use these existing APIs to create specialized
+              versions of the same AI models to create new products and services
+              of long-lasting value.
+            </span>
+            <br />
+            <span>
+              • Altman believes that small startups should leverage the
+              advantage of low costs and fast cycle times. "And if you have
+              those, you can then compete as a startup against the big
+              incumbents."
+            </span>
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-section-separator"></div>
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner08">
+          <h1 class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text279">
+            <span>
+              Impact on the broader visual arts (including design and
+              scientific, practical applications)
+            </span>
+            <br />
+            <br />
+          </h1>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text283">
+            <span>
+              There is often a tendency to equate the entirety of visual arts
+              with (or have it represented by) the more aesthetic disciplines or
+              genre (aka “fine arts”), as taught in art school, subjected to
+              critical reviews, displayed in galleries, or at least created
+              based on some high artistic standards and therefore expected to
+              command a higher price for its intrinsic value.
+            </span>
+            <br />
+            <br />
+            <span>
+              The other branches are often forgotten or deemed marginal. I.e.,
+              “I’m an artist, you’re in layout design, s/he’s just an effin’
+              Photoshop/Autocad implementor or grunt for an animation scene.”
+            </span>
+            <br />
+            <br />
+            <span>
+              But let’s constantly remind ourselves that, throughout history,
+              art has never really been separable from crafts (the production of
+              materially useful goods and services), which in turn require
+              certain degrees of personal and team skills—the result of which is
+              that much of the visual arts created by society are not displayed
+              in museums and galleries, not viewed in theaters and sold at
+              auctions, but are embedded in other mundane things that we use
+              every day: buildings (via architecture), appliances, furniture and
+              wearables (via industrial and fashion design), books and magazines
+              (layout), etc.
+            </span>
+            <br />
+            <br />
+            <span>
+              Many areas of pre-digital creative media and arts—from crumbling
+              artifacts of ancient cultures to recent analog libraries and
+              artworks—are being given new leases on life and wider access by a
+              huge global public with the help of digital visualization tools.
+              AI is increasingly used to automate these otherwise tedious and
+              error-prone archival/restoration processes. Examples that are
+              clear in our chosen topic of AI-generated art are
+              enhancement/restoration and colorization of old photographic
+              images and films.
+            </span>
+            <br />
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+          <span></span>
+        </div>
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner09">
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-div1">
+            <dangerous-html
+              html="<html>
+    <body>
+        <a href='https://ibb.co/X7h6gPm'><img src='https://i.ibb.co/D9xmyF3/maxresdefault-1.jpg' alt='maxresdefault-1' border='0'></a><br /><a target='_blank' href='https://statewideinventory.org/used-cars-for-sale'>statewide auto sales inventory</a><br />
+        </body>
+        </html>
+        "
+            ></dangerous-html>
+          </div>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text299">
+            Image depicting an AI enhancement/restoration and colorization.
+          </span>
+          <span></span>
+        </div>
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-banner10">
+          <span></span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text302">
+            <span>
+              Even in the natural and social sciences, the role of such
+              practical applications of the digital art technology is
+              increasingly recognized, e.g., the rapid growth of data
+              visualization and computerized simulation/reconstruction and
+              model-making (in biochemistry, physics including astrophysics,
+              medicine, anthropology, archeology, legal forensics, etc). All
+              these are being created, not just by data scientists and computer
+              geeks, but by a new generation of scientists/technicians trained
+              in data visualization, which is fast developing its own principles
+              of digital aesthetics and AI-friendly methods.And we haven’t even
+              begun to speak yet of still more branches of digital technology
+              that provide increasingly smarter tools not just for visualization
+              on computer screens and printouts, but physical/virtual
+              interaction in full 3D. Ultra-realistic video games in 3D AR/VR
+              environments are becoming useful tools in education, training, and
+              research. 3D printing has its own explosive growth both for the
+              supply side and the demand side. And in the reverse direction,
+              which some theorists think will also become increasingly
+              important, we humans will soon be conversing and creatively
+              collaborating with AI “smart agents” via such 3D AR/VR
+              environments – for example, in designing a home, doing a virtual
+              3D “walkthrough”, and giving instructions to our AI Archi-designer
+              helper to “move this post a bit to the right, have smaller windows
+              on the left, and so on.”The purpose of pointing these out, we
+              think, is to further emphasize that the technological revolution
+              brought by AI in visual arts is not limited to very specific (and
+              easily recognized) fields where a visual work can stand alone as
+              art, but in so many products, services, and processes where the
+              role of the visual-creative aspect is embedded and hidden. AI art
+              technology may thus be seen as a very generalized tool with so
+              many potential applications that for now are still unknown or just
+              being discovered. These potential innovations and uses will
+              certainly create new generations of “disruptor” startups in the
+              creative industries (which are themselves already exploding).
+              These disruptors could well mostly be small indie groups and
+              individuals, but also possibly renegade innovators working quietly
+              within the established giants.
+            </span>
+            <br />
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-section-separator1"></div>
+        <footer class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-footer">
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-footer-container">
+            <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-logo1">
+              <a
+                href="##Landing Page"
+                class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-link13"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/artboard%201-400w.png"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-image2"
+                />
+              </a>
+            </div>
+            <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-group-information">
+              <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text308">
+                GROUP J
+              </span>
+              <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text309">
+                <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text310">
+                  MMS 142
+                </span>
+                <br class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text311" />
+                <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text312">
+                  Internet Technologies
+                </span>
+                <br />
+              </span>
+            </div>
+            <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-links-container">
+              <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-members">
+                <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-content-team">
+                  <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container04">
+                    <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container05">
+                      <div
+                        class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-product-container"
+                      >
+                        <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text314">
+                          Content Team
+                        </span>
+                        <li class="list-item">
+                          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text315">
+                            Umali, Marianne
+                          </span>
+                        </li>
+                      </div>
+                      <li class="list-item">
+                        <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text316">
+                          Velo, Christian Paul
+                        </span>
+                      </li>
+                      <li class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-li2 list-item">
+                        <span>Verzola, Pio Jr</span>
+                      </li>
+                      <li class="list-item">
+                        <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text318">
+                          Villanueva, Cyrille
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text319">
+                          Yango, Peter Samuel
+                        </span>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-website-team">
+                  <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text320">
+                    Website Team
+                  </span>
+                  <li class="list-item">
+                    <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text321">
+                      Timon, Patricia Mae
+                    </span>
+                  </li>
+                  <li class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-li6 list-item">
+                    <span>
+                      <span>Tomacruz, Jana Denise</span>
+                      <br />
+                    </span>
+                  </li>
+                  <li class="list-item">
+                    <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text325">
+                      Torres, Aleah
+                    </span>
+                  </li>
+                  <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container06">
+                    <li class="list-item"></li>
+                    <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text326">
+                      Tupan, Charleigh Belle
+                    </span>
+                  </div>
+                  <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container07">
+                    <li class="list-item">
+                      <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text327">
+                        Yacat, Ma. Xenia
+                      </span>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-separator1"></div>
+          <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-license">
+            <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container08">
+              <div class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-container09">
+                <img
+                  alt="image"
+                  src="public/playground_assets/cc-200h.png"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-image3"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/person-200h.png"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-image4"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/share-200h.png"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-image5"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/commercial-200h.png"
+                  class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-image6"
+                />
+              </div>
+            </div>
+          </div>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text328">
+            School Year 2022 — 2023
+          </span>
+          <span class="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n-text329">
+            1st Trimester
+          </span>
+        </footer>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>

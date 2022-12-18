@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DEEP-DIVE - AI in Art</title>
+    <meta property="og:title" content="DEEP-DIVE - AI in Art" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Open Sans;
+        font-size: 18px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+      html {
+      scroll-behavior: smooth;
+      }
+    </style>
+    <style data-section-id="dropdown">
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html@0.1.11/dist/default/lib.umd.js"
+      ></script>
+      <link href="./d-e-e-p-d-i-v-e.css" rel="stylesheet" />
+
+      <div class="d-e-e-p-d-i-v-e-container">
+        <div
+          data-thq="thq-dropdown"
+          class="d-e-e-p-d-i-v-e-thq-dropdown list-item"
+        >
+          <ul
+            data-thq="thq-dropdown-list"
+            class="d-e-e-p-d-i-v-e-dropdown-list"
+          >
+            <li
+              data-thq="thq-dropdown"
+              class="d-e-e-p-d-i-v-e-dropdown list-item"
+            >
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="d-e-e-p-d-i-v-e-dropdown-toggle"
+              >
+                <span class="d-e-e-p-d-i-v-e-text">Sub-menu Item</span>
+              </div>
+            </li>
+            <li
+              data-thq="thq-dropdown"
+              class="d-e-e-p-d-i-v-e-dropdown1 list-item"
+            >
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="d-e-e-p-d-i-v-e-dropdown-toggle1"
+              >
+                <span class="d-e-e-p-d-i-v-e-text001">Sub-menu Item</span>
+              </div>
+            </li>
+            <li
+              data-thq="thq-dropdown"
+              class="d-e-e-p-d-i-v-e-dropdown2 list-item"
+            >
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="d-e-e-p-d-i-v-e-dropdown-toggle2"
+              >
+                <span class="d-e-e-p-d-i-v-e-text002">Sub-menu Item</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="d-e-e-p-d-i-v-e-navbar">
+          <div class="d-e-e-p-d-i-v-e-logo">
+            <img
+              alt="image"
+              src="public/playground_assets/artboard%201-400w.png"
+              class="d-e-e-p-d-i-v-e-image"
+            />
+          </div>
+          <div class="d-e-e-p-d-i-v-e-links-container">
+            <a href="index.html" class="d-e-e-p-d-i-v-e-link Anchor">HOME</a>
+            <a href="d-e-e-p-d-i-v-e.html" class="d-e-e-p-d-i-v-e-link01">
+              DEEP DIVE
+            </a>
+            <a href="d-i-s-r-u-p-t-o-n.html" class="d-e-e-p-d-i-v-e-link02">
+              <span class="d-e-e-p-d-i-v-e-text003">DISRUPT: OFF</span>
+              <br />
+            </a>
+            <a
+              href="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n.html"
+              class="d-e-e-p-d-i-v-e-link03"
+            >
+              BEYOND
+            </a>
+            <a href="r-e-f-e-r-e-n-c-e-s.html" class="d-e-e-p-d-i-v-e-link04">
+              REFERENCES
+            </a>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-cta-container">
+            <div data-role="BurgerMenu" class="d-e-e-p-d-i-v-e-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon">
+                <path
+                  d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div data-role="MobileMenu" class="d-e-e-p-d-i-v-e-mobile-menu">
+            <div class="d-e-e-p-d-i-v-e-top">
+              <img
+                alt="image"
+                src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
+                class="d-e-e-p-d-i-v-e-image1"
+              />
+              <div
+                data-role="CloseMobileMenu"
+                class="d-e-e-p-d-i-v-e-container01"
+              >
+                <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon02">
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-mid">
+              <div class="d-e-e-p-d-i-v-e-links-container1">
+                <a href="#features" class="d-e-e-p-d-i-v-e-link05 Anchor">
+                  features
+                </a>
+                <span class="d-e-e-p-d-i-v-e-link06 Anchor">services</span>
+                <span class="d-e-e-p-d-i-v-e-link07 Anchor">About Us</span>
+                <span class="d-e-e-p-d-i-v-e-link08 Anchor">contact</span>
+              </div>
+              <button class="d-e-e-p-d-i-v-e-cta-btn Anchor button">
+                sTART BUILDING
+              </button>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-bot">
+              <div class="d-e-e-p-d-i-v-e-social-links-container">
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="d-e-e-p-d-i-v-e-icon04"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="d-e-e-p-d-i-v-e-icon06"
+                >
+                  <path
+                    d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="d-e-e-p-d-i-v-e-icon08"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Landing Page - Disrupt On" class="d-e-e-p-d-i-v-e-banner">
+          <h1 class="d-e-e-p-d-i-v-e-text005">Deep Dive</h1>
+          <span class="d-e-e-p-d-i-v-e-text006">
+            Roleplay to learn AI Image Generation
+          </span>
+          <div class="d-e-e-p-d-i-v-e-separator"></div>
+          <nav class="d-e-e-p-d-i-v-e-nav"></nav>
+        </div>
+        <div class="d-e-e-p-d-i-v-e-banner1">
+          <div class="d-e-e-p-d-i-v-e-card">
+            <div class="d-e-e-p-d-i-v-e-container02">
+              <span class="d-e-e-p-d-i-v-e-text007">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text008">1</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container03">
+              <h1 class="d-e-e-p-d-i-v-e-text009">Huh? What is this?</h1>
+              <span class="d-e-e-p-d-i-v-e-text010">
+                You find yourself at the tip of the iceberg...
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text011">
+                <br class="d-e-e-p-d-i-v-e-text012" />
+                <span class="d-e-e-p-d-i-v-e-text013">
+                  Words that can materialize images, AI IMAGE GENERATION.
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text014" />
+                <br class="d-e-e-p-d-i-v-e-text015" />
+                <span class="d-e-e-p-d-i-v-e-text016">
+                  Much attention has been given to this technology but it can be
+                  difficult to understand how everything actually works. It is
+                  easy to lose yourself and confuse specific terminologies with
+                  one another. What is Machine Learning? How is it different
+                  from Deep Learning? What part do Neural Networks play in this?
+                  Which robot overlord will grab humanity by its neck in the
+                  cold, distant future?&nbsp;
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text017">
+                  Unfortunately, the following guide might not be able to answer
+                  all your burning questions :(
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text018" />
+                <br class="d-e-e-p-d-i-v-e-text019" />
+                <span class="d-e-e-p-d-i-v-e-text020">
+                  However, from core ideas to specific mechanisms and
+                  applications, it will provide a primer regarding AI Image
+                  Generation!
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card01">
+            <div class="d-e-e-p-d-i-v-e-container04">
+              <span class="d-e-e-p-d-i-v-e-text022">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text023">2</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container05">
+              <h1 class="d-e-e-p-d-i-v-e-text024">Artificial Intelligence</h1>
+              <span class="d-e-e-p-d-i-v-e-text025">
+                Feel free to touch the water~
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text026">
+                <br class="d-e-e-p-d-i-v-e-text027" />
+                <span class="d-e-e-p-d-i-v-e-text028">
+                  AI IMAGE GENERATION IS NOT MAGIC, SORRY.
+                </span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text030">
+                <br />
+                <span class="d-e-e-p-d-i-v-e-text032">
+                  The core idea in AI Image Generation, as you can tell from its
+                  name, is
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text033">
+                  Artificial Intelligence (AI)
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text034">
+                  —a branch of computer science that is 60 years of old
+                  (Brighterion, 2017).
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text035" />
+                <br class="d-e-e-p-d-i-v-e-text036" />
+                <span class="d-e-e-p-d-i-v-e-text037">
+                  AI deals with technologies and algorithms that are capable of
+                  mimicking human tasks and behavior by simulating intelligence
+                  (Townshend, 2022). AI allows machines to recognize speech,
+                  make independent decisions, understand human languages,
+                  practice visual perception, and many more.
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text038" />
+                <br class="d-e-e-p-d-i-v-e-text039" />
+                <span class="d-e-e-p-d-i-v-e-text040">
+                  In short, AI is an umbrella term regarding anything that makes
+                  computers smart
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text041" />
+                <span class="d-e-e-p-d-i-v-e-text042">
+                  (Tiwari et al., 2018).
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card02">
+            <div class="d-e-e-p-d-i-v-e-container06">
+              <span class="d-e-e-p-d-i-v-e-text044">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text045">3</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container07">
+              <h1 class="d-e-e-p-d-i-v-e-text046">Machine Learning</h1>
+              <span class="d-e-e-p-d-i-v-e-text047">
+                <span>Calm your nerves and dip your legs. You’re ready.</span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text050">
+                <br class="d-e-e-p-d-i-v-e-text051" />
+                <span>
+                  Machine learning (ML) is a subset of AI. It consists of
+                  algorithms that execute intelligent tasks by learning directly
+                  from data instead of following rules that are pre-programmed
+                  by a human developer (Tiwari et al., 2018).
+                </span>
+                <br />
+                <br />
+                <span>
+                  In traditional programming, human developers would code
+                  explicit step-by-step rules that tell a computer program how
+                  to do something. In ML, the computer program will instead be
+                  given tasks, then it will analyze large amounts of data
+                  (datasets)—provided by human developers—to find patterns or
+                  examples of how its assigned tasks can be accomplished. Over
+                  time, this process also referred to as “training,” allows the
+                  computer program to learn the best way to achieve its goal
+                  (Tiwari et al., 2018).
+                </span>
+                <br />
+                <br />
+                <span>
+                  Basically, ML allows computer programs to be “programmed by
+                  example”
+                </span>
+                <br />
+                <span>(Brighterion, 2017).</span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text062">
+                <br class="d-e-e-p-d-i-v-e-text063" />
+                <span class="d-e-e-p-d-i-v-e-text064">
+                  FOR MACHINE LEARNING, “DATA IS CHEAP AND&nbsp;
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text065">ABUNDANT&nbsp;</span>
+                <br class="d-e-e-p-d-i-v-e-text066" />
+                <span class="d-e-e-p-d-i-v-e-text067">
+                  WHILE KNOWLEDGE IS EXPENSIVE AND SCARCE”&nbsp;
+                </span>
+                <br />
+                <span class="d-e-e-p-d-i-v-e-text069">
+                  (Tiwari et al., 2018, p.2).
+                </span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text071">
+                <span>
+                  Machine learning allows knowledge to be extracted from data.
+                  Going into more detail, “finding patterns or examples” or
+                  “training” means that machine learning algorithms (in computer
+                  programs) would classify pieces of data either into
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text073">several features</span>
+                <span class="d-e-e-p-d-i-v-e-text074">and/or</span>
+                <span class="d-e-e-p-d-i-v-e-text075">broad categories.</span>
+                <span>
+                  These features or categories will help the algorithm extract
+                  knowledge and reach its desired outcome (Tiwari et al.,2018;
+                  see also Brighterion, 2017).
+                </span>
+                <br />
+                <br />
+                <span>
+                  Furthermore, how machine learning algorithms use datasets can
+                  be separated into
+                </span>
+                <a href="#lvl11_p2" class="d-e-e-p-d-i-v-e-link09">
+                  various approaches
+                </a>
+                <span>, but two approaches generally stand out:</span>
+                <span class="d-e-e-p-d-i-v-e-text081">Supervised</span>
+                <span>and</span>
+                <span class="d-e-e-p-d-i-v-e-text083">
+                  Unsupervised learning
+                </span>
+                <span>(Tiwari et al., 2018).</span>
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card03">
+            <div class="d-e-e-p-d-i-v-e-container08">
+              <span class="d-e-e-p-d-i-v-e-text086">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text087">4</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container09">
+              <h1 class="d-e-e-p-d-i-v-e-text088">
+                Machine Learning Approaches
+              </h1>
+              <span class="d-e-e-p-d-i-v-e-text089">
+                <span>You took a deep breath and dived!</span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text092">
+                <br class="d-e-e-p-d-i-v-e-text093" />
+                <span>For the</span>
+                <span class="d-e-e-p-d-i-v-e-text095">
+                  supervised learning approach
+                </span>
+                <span>
+                  , machine learning algorithms would be trained by feeding it
+                  with
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text097">labeled datasets</span>
+                <span>
+                  . Labeled datasets simply mean that a human developer had
+                  already properly described and classified each piece of data.
+                  When a task is assigned to a supervised ML algorithm, it will
+                  use the labeled datasets as a basis to weigh the different
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text099">features</span>
+                <span>
+                  of data until a proper pattern or example appropriate to the
+                  task assigned is determined (Alteryx, n.d.).
+                </span>
+                <br />
+              </span>
+              <span id="lvl4_p2" class="d-e-e-p-d-i-v-e-text102">
+                <br />
+                <span>In contrast, the</span>
+                <span class="d-e-e-p-d-i-v-e-text105">
+                  unsupervised learning approach
+                </span>
+                <span>
+                  would provide machine learning algorithms with unlabeled
+                  datasets (Alteryx, n.d.). An unsupervised ML algorithm will
+                  sort pieces of data into
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text107">
+                  meaningful categories
+                </span>
+                <span>
+                  which will help it uncover patterns and relationships—without
+                  human intervention—that are appropriate enough to accomplish
+                  the task assigned to it (Brighterion, 2017). These categories,
+                  however, need to be meaningful only to the algorithm and not
+                  humans, as such incomprehensible categories to humans, like
+                  the
+                </span>
+                <a href="#banana 4" class="d-e-e-p-d-i-v-e-link10">
+                  “banana-ness” of a banana
+                </a>
+                <span>, may be made.</span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text111">
+                <br />
+                <span></span>
+                <span class="d-e-e-p-d-i-v-e-text114">
+                  SUPERVISED LEARNING IS LIKE YOUR CRUSH,
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text115" />
+                <br class="d-e-e-p-d-i-v-e-text116" />
+                <span class="d-e-e-p-d-i-v-e-text117">
+                  IT NEEDS LABELS AND HUMAN (YOU) INTERVENTION
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text118">.</span>
+                <br />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text121">
+                <span>
+                  Supervised learning is used for machine learning tasks that
+                  require precise outputs. For example, a machine learning
+                  algorithm can predict when a plane is about to leave an
+                  airport, by being trained on a human-written dataset. The said
+                  dataset can include information about peak hours at the
+                  airport and weather types that can affect flight conditions
+                  (Alteryx, n.d.).
+                </span>
+                <br />
+                <br />
+                <span>
+                  Unsupervised learning, on the other hand, is mostly used for
+                  generative AI. (Alteryx, n.d.).
+                </span>
+                <br />
+                <br />
+                <span>
+                  With all these mechanisms in mind, machine learning technology
+                  is used in situational problems wherein there are no perfect
+                  or exact answers.
+                </span>
+                <span></span>
+                <br />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text132">
+                <span class="d-e-e-p-d-i-v-e-text133">
+                  UNLIKE YOUR PARENT’S EXPECTATIONS, MACHINE
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text134" />
+                <br class="d-e-e-p-d-i-v-e-text135" />
+                <span class="d-e-e-p-d-i-v-e-text136">
+                  LEARNING IS SATISFIED WITH JUST BEING GOOD ENOUGH.
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text137" />
+                <br />
+              </span>
+              <span id="lvl4_p6" class="d-e-e-p-d-i-v-e-text139">
+                <span>
+                  The essence of ML, then, is to make computers that can provide
+                  guesses that are “good enough” to be useful in certain
+                  scenarios (Tiwari et al., 2018). This led to numerous
+                  applications of ML that have allowed it to shape our society
+                  today in immeasurably
+                </span>
+                <a
+                  href="d-i-s-r-u-p-t-o-n.html"
+                  class="d-e-e-p-d-i-v-e-navlink"
+                >
+                  more ways than one.
+                </a>
+                <br />
+                <br class="d-e-e-p-d-i-v-e-text142" />
+                <br />
+              </span>
+            </div>
+          </div>
+          <div id="lvl5_container" class="d-e-e-p-d-i-v-e-card04">
+            <div class="d-e-e-p-d-i-v-e-container10">
+              <span class="d-e-e-p-d-i-v-e-text144">LEVEL</span>
+              <span id="level 5" class="d-e-e-p-d-i-v-e-text145">5</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container11">
+              <div class="d-e-e-p-d-i-v-e-container12">
+                <h1 class="d-e-e-p-d-i-v-e-text146">
+                  Applications of Machine Learning
+                </h1>
+                <span class="d-e-e-p-d-i-v-e-text147">
+                  <span>
+                    As you swim downwards...somehow you can breathe underwater?
+                  </span>
+                  <br />
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text150">
+                  <br class="d-e-e-p-d-i-v-e-text151" />
+                  <span>
+                    AI as a whole has been very pervasive for the last six
+                    decades, especially machine learning. Currently, machine
+                    learning models can be found in major technological systems
+                    worldwide and their corresponding industries (Brighterion,
+                    2017).
+                  </span>
+                  <br />
+                  <br />
+                  <span>
+                    Here are some notable applications of machine learning
+                    (Townshend, 2022; see also Marr, 2021; Tiwari et al., 2018):
+                  </span>
+                  <br />
+                  <br />
+                </span>
+                <div class="d-e-e-p-d-i-v-e-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon10">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="d-e-e-p-d-i-v-e-container13">
+                    <h2 class="d-e-e-p-d-i-v-e-text158">Consumer Items</h2>
+                    <li class="d-e-e-p-d-i-v-e-li list-item">
+                      <span>
+                        <span>
+                          A smart device with voice assistants that use speech
+                          recognition to understand what a user says and act
+                          accordingly.
+                        </span>
+                        <br />
+                        <br />
+                      </span>
+                    </li>
+                    <li class="list-item">
+                      <span>
+                        <span>
+                          A camera application that can scan and recognize
+                          handwriting to turn it into digital text.
+                        </span>
+                        <br />
+                      </span>
+                    </li>
+                  </div>
+                </div>
+                <div class="d-e-e-p-d-i-v-e-feature-card1">
+                  <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon12">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="d-e-e-p-d-i-v-e-container14">
+                    <h2 class="d-e-e-p-d-i-v-e-text166">
+                      Social Media And Communications
+                    </h2>
+                    <li class="list-item">
+                      <span>
+                        <span>
+                          Social media sites that use facial recognition for
+                          automatic tagging in pictures
+                        </span>
+                        <br />
+                      </span>
+                    </li>
+                    <li class="d-e-e-p-d-i-v-e-li03 list-item">
+                      <span>
+                        <span>
+                          Social media sites that use AI to moderate and combat
+                          harmful website content
+                        </span>
+                        <br />
+                        <br />
+                        <br />
+                      </span>
+                    </li>
+                    <li class="list-item">
+                      <span>
+                        <span>
+                          Messaging or email applications that automatically
+                          filter spam and harmful content
+                        </span>
+                        <br />
+                      </span>
+                    </li>
+                  </div>
+                </div>
+                <div class="d-e-e-p-d-i-v-e-feature-card2">
+                  <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon14">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="d-e-e-p-d-i-v-e-container15">
+                    <h2 class="d-e-e-p-d-i-v-e-text178">
+                      Science and Medicine
+                    </h2>
+                    <li class="d-e-e-p-d-i-v-e-li05 list-item">
+                      <span>
+                        <span>
+                          A computer program that automatically improves the
+                          quality of images taken by a microscope.
+                        </span>
+                        <br />
+                        <br />
+                        <br />
+                      </span>
+                    </li>
+                    <li class="d-e-e-p-d-i-v-e-li06 list-item">
+                      <span class="d-e-e-p-d-i-v-e-text184">
+                        <span>
+                          An application that uses image recognition to identify
+                          pictures taken by the user, useful in situations for
+                          knowing the name of a plant or an insect, etc.
+                        </span>
+                        <br />
+                        <br />
+                      </span>
+                    </li>
+                    <li class="d-e-e-p-d-i-v-e-li07 list-item">
+                      <span>
+                        <span>
+                          A machine learning algorithm that uses image
+                          recognition to detect and diagnose diseases during an
+                          endoscopic examination.
+                        </span>
+                        <br />
+                        <br />
+                      </span>
+                    </li>
+                    <li class="d-e-e-p-d-i-v-e-li08 list-item">
+                      <span>
+                        An application that uses computer vision to identify and
+                        speak observations in its field of vision, designed for
+                        helping people with visual impairments.
+                      </span>
+                    </li>
+                  </div>
+                </div>
+                <div class="d-e-e-p-d-i-v-e-feature-card3">
+                  <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon16">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="d-e-e-p-d-i-v-e-container16">
+                    <h2 class="d-e-e-p-d-i-v-e-text193">Engineering</h2>
+                    <li class="d-e-e-p-d-i-v-e-li09 list-item">
+                      <span>
+                        <span>
+                          The use of AI to develop autonomous vehicle features
+                          such as self-parking mechanisms.
+                        </span>
+                        <br />
+                        <br />
+                      </span>
+                    </li>
+                    <li class="d-e-e-p-d-i-v-e-li10 list-item">
+                      <span>
+                        AI-controlled mechanisms in portable devices, such as
+                        smart sensors in a camera
+                      </span>
+                    </li>
+                    <li class="list-item">
+                      <span>
+                        <span>
+                          AI-assisted CCTV cameras that use facial recognition
+                          to help law enforcement departments in tracking down
+                          criminals.
+                        </span>
+                        <br />
+                      </span>
+                    </li>
+                  </div>
+                </div>
+                <div class="d-e-e-p-d-i-v-e-feature-card4">
+                  <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon18">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="d-e-e-p-d-i-v-e-container17">
+                    <h2 class="d-e-e-p-d-i-v-e-text202">
+                      Business and Enterprise
+                    </h2>
+                    <div class="d-e-e-p-d-i-v-e-container18">
+                      <li class="list-item"></li>
+                      <span>
+                        Retailers that use algorithms to monitor the stock and
+                        availability of their products.
+                      </span>
+                    </div>
+                    <div class="d-e-e-p-d-i-v-e-container19">
+                      <li class="list-item"></li>
+                      <span>
+                        Retailers that use facial recognition to determine their
+                        target audience.&nbsp;
+                      </span>
+                    </div>
+                    <div class="d-e-e-p-d-i-v-e-container20"></div>
+                    <div class="d-e-e-p-d-i-v-e-container21">
+                      <div class="d-e-e-p-d-i-v-e-container22"></div>
+                      <div class="d-e-e-p-d-i-v-e-container23"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-e-e-p-d-i-v-e-feature-card5">
+                  <svg viewBox="0 0 1024 1024" class="d-e-e-p-d-i-v-e-icon20">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div class="d-e-e-p-d-i-v-e-container24">
+                    <h2 class="d-e-e-p-d-i-v-e-text205">Art and Design</h2>
+                    <li class="d-e-e-p-d-i-v-e-li14 list-item">
+                      <span>
+                        Smart features in editing apps that automate creative
+                        tasks (automatic filters and AI-powered image
+                        upscaling).
+                      </span>
+                    </li>
+                    <li class="list-item">
+                      <span>
+                        A smart feature in editing apps that replace the pixels
+                        of an image to match pixels around it (content-aware
+                        fill).
+                      </span>
+                    </li>
+                  </div>
+                </div>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text208">
+                <br class="d-e-e-p-d-i-v-e-text209" />
+                <span>
+                  It can be noticed that in the creative industries of art and
+                  design—before generative AI came to the limelight—AI is often
+                  used to augment the creative process of artists and
+                  professionals and not mimic their output or behavior. As
+                  technology continuously improve over the years, however, more
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text211">
+                  machine learning techniques
+                </span>
+                <span>
+                  had been developed which led to a revolution in the field of
+                  AI: Generative AI—such as AI Text-to-Image Generation—that is
+                  capable of using words as input to materialize images, similar
+                  to how an artist paints pictures.
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card05">
+            <div class="d-e-e-p-d-i-v-e-container25">
+              <span class="d-e-e-p-d-i-v-e-text214">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text215">6</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container26">
+              <div class="d-e-e-p-d-i-v-e-container27">
+                <h1 class="d-e-e-p-d-i-v-e-text216">
+                  <span>Neural Network in Machine</span>
+                  <span>Learning</span>
+                </h1>
+                <span class="d-e-e-p-d-i-v-e-text219">
+                  <span>
+                    You stare into the abyss that awaits you...you should keep
+                    swimming.
+                  </span>
+                  <br />
+                </span>
+                <div class="d-e-e-p-d-i-v-e-div">
+                  <dangerous-html
+                    html="<iframe src='https://giphy.com/embed/ncve7z4oPPURO' width='480' height='278' frameBorder='0' class='giphy-embed' allowFullScreen></iframe><p><a href='https://giphy.com/gifs/off-wax-karatekid-ncve7z4oPPURO'>via GIPHY</a></p>"
+                  ></dangerous-html>
+                </div>
+                <span class="d-e-e-p-d-i-v-e-text222">
+                  <span class="d-e-e-p-d-i-v-e-text223">
+                    "Wax on, wax off…we start with the most basic."
+                  </span>
+                  <span class="d-e-e-p-d-i-v-e-text224">
+                    (Wax on, Wax off, 1984)
+                  </span>
+                  <br class="d-e-e-p-d-i-v-e-text225" />
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text226">
+                  <br />
+                  <span>
+                    To start discussing generative AI, the most basic concept
+                    behind it should be first discussed, namely the
+                  </span>
+                  <span class="d-e-e-p-d-i-v-e-text229">Neural Network.</span>
+                  <span></span>
+                  <span>
+                    Simply put, Neural Network is a concept in AI that
+                    corresponds to technologies inspired by the structure of the
+                    human brain.
+                  </span>
+                  <br />
+                  <br />
+                </span>
+                <div class="d-e-e-p-d-i-v-e-div01">
+                  <dangerous-html
+                    html="<img src='https://i.ibb.co/R0T12Ks/FIG01.png' alt='FIG01' border='0' width='600' height='356'>"
+                  ></dangerous-html>
+                </div>
+                <span class="d-e-e-p-d-i-v-e-text234">
+                  <br />
+                  <span>
+                    Visually shown as a web-like connection of nodes, neural
+                    networks are composed of interconnected elements with each
+                    acting as artificial neurons (Brighterion, 2017).
+                  </span>
+                  <br />
+                  <br />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card06">
+            <div class="d-e-e-p-d-i-v-e-container28">
+              <span class="d-e-e-p-d-i-v-e-text239">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text240">7</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container29">
+              <h1 class="d-e-e-p-d-i-v-e-text241">Deep Learning</h1>
+              <span class="d-e-e-p-d-i-v-e-text242">
+                <span>You’re having deep thoughts about this one.</span>
+                <br />
+              </span>
+              <div class="d-e-e-p-d-i-v-e-div02">
+                <dangerous-html
+                  html="<img src='https://i.ibb.co/rH0dVWL/FIG02.png' alt='FIG02' border='0' width='600' height='356'>"
+                ></dangerous-html>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text245">
+                <span>
+                  If the concept of a simple neural network shown above is
+                  multiplied into an interconnected web of thousands of millions
+                  of artificial neurons, then stacked into multiple layers, it
+                  will result in a technology called
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text247">
+                  Artificial Neural Networks
+                </span>
+                <span>
+                  (ANNs) (Vadapalli, 2020). ANN technology is the heart of a
+                  machine learning technique called
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text249">Deep Learning</span>
+                <span>(IBM Cloud Education, 2020a).</span>
+                <br />
+                <br />
+                <span>
+                  Deep learning is a subset of machine learning. It is a type of
+                  ML technique that represents human intelligence as layers of
+                  neural networks (Vadapalli, 2020).
+                </span>
+                <br />
+                <br />
+              </span>
+              <div class="d-e-e-p-d-i-v-e-div03">
+                <dangerous-html
+                  html="<img src='https://i.ibb.co/d0vNqbf/FIG03.png' alt='FIG03' border='0' width='600' height='356'>"
+                ></dangerous-html>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text256">
+                <br class="d-e-e-p-d-i-v-e-text257" />
+                <span>Once fed with information from</span>
+                <a href="#lvl4_p2" class="d-e-e-p-d-i-v-e-link11">
+                  unlabeled datasets,
+                </a>
+                <span>
+                  &nbsp;these layers of neural networks classify information as
+                  “a nested hierarchy of concepts, with each concept defined in
+                  relation to simpler concepts” (Tiwari et al., 2018, p.1) These
+                  concepts along with their relationship to each other are
+                  visually represented as interconnected artificial neurons
+                  (Vadapalli, 2020).
+                </span>
+                <br />
+                <br />
+              </span>
+              <div id="banana 4" class="d-e-e-p-d-i-v-e-div04">
+                <dangerous-html
+                  id="banana 4"
+                  html="<html>
+    <body>
+        <a href='https://ibb.co/8dZdnVV'><img src='https://i.ibb.co/ZYDYRCC/FIG04.png' alt='FIG04' border='0'></a>
+        </body>
+        </html>"
+                ></dangerous-html>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text262">
+                <span>
+                  Within an ANN, the ML algorithm computes or guesses abstract
+                  representations that are “
+                </span>
+                <a href="#lvl4_p6" class="d-e-e-p-d-i-v-e-link12">
+                  good enough
+                </a>
+                <span>
+                  ” by using data from less abstract information in other layers
+                  (Tiwari et al., 2018). In a sense, the layers of ANN basically
+                  act as a specific threshold to which artificial neurons are
+                  activated and given a concept or more correctly, a
+                  mathematical value (Vadapalli, 2020).
+                </span>
+                <br />
+                <br />
+              </span>
+              <div>
+                <dangerous-html
+                  html="<html>
+    <body>
+        <a href='https://ibb.co/wMVxWbv'><img src='https://i.ibb.co/vZpKPrt/FIG05.png' alt='FIG05' border='0'></a>
+        </body>
+        </html>"
+                ></dangerous-html>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text267">
+                <span>
+                  Therefore, deep learning, in a nutshell, is the process of ML
+                  algorithms using hierarchical layers that contain a
+                  representation of concepts to perform pattern recognition
+                  (Brighterion, 2017). The ability for pattern recognition is
+                  then applied to machines, resulting in technologies like
+                </span>
+                <a href="#lvl5_container" class="d-e-e-p-d-i-v-e-link13">
+                  computer vision, speech recognition, facial recognition, and
+                  image recognition
+                </a>
+                <span>(Townshend, 2022).</span>
+                <br />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text272">
+                <br class="d-e-e-p-d-i-v-e-text273" />
+                <span class="d-e-e-p-d-i-v-e-text274">
+                  “I MAKE MISTAKES BUT LEARN FROM EVERY ONE
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text275" />
+                <span class="d-e-e-p-d-i-v-e-text276">
+                  AND WHEN IT’S SAID AND DONE
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text277">I BET THIS BROTHER</span>
+                <br class="d-e-e-p-d-i-v-e-text278" />
+                <span class="d-e-e-p-d-i-v-e-text279">BE A BETTER ONE"</span>
+                <br />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text282">
+                <span class="d-e-e-p-d-i-v-e-text283">
+                  LYRICS FROM 2PAC’S GHETTO GOSPEL CAPTURES
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text284" />
+                <br class="d-e-e-p-d-i-v-e-text285" />
+                <span class="d-e-e-p-d-i-v-e-text286">
+                  THE IDEA OF DEEP LEARNING #GOAT
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text287">🔥</span>
+                <br class="d-e-e-p-d-i-v-e-text288" />
+                <br class="d-e-e-p-d-i-v-e-text289" />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text290">
+                <span>
+                  The process described above captures how ANN or deep learning
+                  mimics the human brain. IBM Cloud Education (2020a) simplifies
+                  it even further by indicating “that the word
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text292">deep</span>
+                <span>
+                  in deep learning is just referring to the depth of layers in a
+                  neural network” (Neural networks vs. deep learning section).
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card07">
+            <div class="d-e-e-p-d-i-v-e-container30">
+              <span class="d-e-e-p-d-i-v-e-text295">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text296">8</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container31">
+              <div class="d-e-e-p-d-i-v-e-container32">
+                <div class="d-e-e-p-d-i-v-e-container33">
+                  <div class="d-e-e-p-d-i-v-e-container34">
+                    <div class="d-e-e-p-d-i-v-e-container35">
+                      <div class="d-e-e-p-d-i-v-e-container36">
+                        <div class="d-e-e-p-d-i-v-e-container37">
+                          <h1 class="d-e-e-p-d-i-v-e-text297">
+                            Clarification on Terminologies
+                          </h1>
+                          <span class="d-e-e-p-d-i-v-e-text298">
+                            <span>
+                              The cold never bothered you anyway...but the
+                              jargon did.
+                            </span>
+                            <br />
+                          </span>
+                          <span class="d-e-e-p-d-i-v-e-text301">
+                            <br class="d-e-e-p-d-i-v-e-text302" />
+                            <span>
+                              To complement the definitions and examples
+                              provided in the previous section, it is best to
+                              think of Artificial Intelligence (AI), Machine
+                              Learning (ML), Deep Learning (DL), and Neural
+                              Networks (NN/ANN) as similar to Matryoshka doll:
+                            </span>
+                            <br />
+                            <br />
+                            <br />
+                          </span>
+                          <div class="d-e-e-p-d-i-v-e-div06">
+                            <dangerous-html
+                              html="<img src='https://i.ibb.co/XkWXDc6/4-matroshka-dolls-different-sizes-cinematic.png' alt='4-matroshka-dolls-different-sizes-cinematic' border='0' width='300px' height='300px'>
+"
+                            ></dangerous-html>
+                          </div>
+                          <span class="d-e-e-p-d-i-v-e-text307">
+                            <span>
+                              Machine learning is a topic or a subfield in the
+                              artificial intelligence discipline. While deep
+                              learning is a technique of machine learning that
+                              uses Artificial Neural Network technology to
+                              extract knowledge from datasets.
+                            </span>
+                            <br />
+                            <br />
+                            <span>
+                              Deep learning can be further differentiated if
+                              compared to traditional variations of machine
+                              learning. For reference, traditional ML refers to
+                              ML techniques that will not be further explored in
+                              this guide, such as Linear Regression, K-means,
+                              Decision Trees, Random Forest, etc. (Tiwari et
+                              al., 2018)
+                            </span>
+                            <br />
+                            <br />
+                            <span>
+                              Please, refer to the following table below (Tiwari
+                              et al., 2018):
+                            </span>
+                            <br />
+                            <br />
+                          </span>
+                        </div>
+                      </div>
+                      <div class="d-e-e-p-d-i-v-e-div07">
+                        <dangerous-html
+                          html="<html>
+    <body>
+      <div style='position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;'>
+  <iframe loading='lazy' style='position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;'
+    src='https://www.canva.com/design/DAFVG6plRUw/view?embed' allowfullscreen='allowfullscreen' allow='fullscreen'>
+  </iframe>
+</div>
+<a href='https://www.canva.com/design/DAFVG6plRUw/view?utm_content=DAFVG6plRUw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link' target='_blank' rel='noopener'></a> 
+    </body>
+</html>"
+                        ></dangerous-html>
+                      </div>
+                    </div>
+                    <span class="d-e-e-p-d-i-v-e-text317">
+                      <span>
+                        As shown in the table, although deep learning acts as an
+                        extension of ML, it still suffers from limitations that
+                        restrict its applications in other industries. Aside
+                        from longer training time and expensive hardware
+                        requirements, the most evident limitation is deep
+                        learning’s incapability to explain its decision-making
+                        process in a way that a human can understand (Tiwari et
+                        al., 2018). This lack of interpretability disqualifies
+                        it for industries that require precise results
+                        (Brighterion, 2017).
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                  <span class="d-e-e-p-d-i-v-e-text320">
+                    <br class="d-e-e-p-d-i-v-e-text321" />
+                    <span class="d-e-e-p-d-i-v-e-text322">“</span>
+                    <span class="d-e-e-p-d-i-v-e-text323">
+                      THERE’S A REASON WHY ROBOT SURGEONS THAT UTILIZE DEEP
+                    </span>
+                    <br class="d-e-e-p-d-i-v-e-text324" />
+                    <span class="d-e-e-p-d-i-v-e-text325">
+                      LEARNING ARE CURRENTLY NONEXISTENT: IT CANNOT EXPLAIN
+                    </span>
+                    <br />
+                    <span class="d-e-e-p-d-i-v-e-text327">
+                      WHY IT HAD TO CUT OFF YOUR LEGS AS TREATMENT FOR
+                    </span>
+                    <br />
+                    <span class="d-e-e-p-d-i-v-e-text329">LEG CRAMPS 😱</span>
+                    <span class="d-e-e-p-d-i-v-e-text330">"</span>
+                    <br />
+                    <br />
+                  </span>
+                  <span class="d-e-e-p-d-i-v-e-text333">
+                    <span>
+                      Another issue is regarding the datasets that DL algorithms
+                      require for training. The fact that DL algorithms can
+                      accept datasets comprising only raw data and no human
+                      intervention is both a blessing and a curse. On one hand,
+                      it can learn independently but on the other hand,
+                      introducing changes in an element from its dataset can
+                      return incorrect results (Brighterion, 2017).
+                    </span>
+                    <br />
+                    <span></span>
+                    <br />
+                  </span>
+                </div>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text338">
+                <span>
+                  Still, without deep learning, AI Image Generation would not
+                  have been possible. Furthermore, the table above infers that
+                  traditional machine learning techniques are very limited in
+                  terms of data processing. Traditional ML can only process
+                  information that is hand-coded and cannot understand raw data
+                  (e.g., pixel values or the English language) (Tiwari et al.,
+                  2018).
+                </span>
+                <br />
+                <span></span>
+                <br />
+              </span>
+              <div class="d-e-e-p-d-i-v-e-div08">
+                <dangerous-html
+                  html="<img src='https://miro.medium.com/max/720/1*bV7S0zACdidh11ikjYpLpQ.webp' alt='Pixel values from an image of Abraham Lincoln' border='0' width='500px' height='217px'>
+"
+                ></dangerous-html>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text343">
+                <span class="d-e-e-p-d-i-v-e-text344">Raw data</span>
+                <span>
+                  : Pixel values taken from an Image (Pixel Values, 2019)
+                </span>
+                <br />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text348">
+                <span>
+                  Deep learning revolutionized machine learning when it made
+                  pattern recognition technology possible. Through pattern
+                  recognition technology, machine learning was able to process
+                  pixels in facial pictures and label them accordingly in its
+                  neural network to automatically tag people in uploaded
+                  pictures on various social media apps. Patten-recognition
+                  technology also gave way to numerous applications in
+                </span>
+                <a href="#level 5" class="d-e-e-p-d-i-v-e-link14">
+                  major technological systems
+                </a>
+                <span>
+                  . Additionally, other fields in machine learning, such as
+                  Natural Language Processing (NLP) also allowed for further
+                  developments in machine understanding of raw data,
+                  specifically natural language.
+                </span>
+                <br />
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card08">
+            <div class="d-e-e-p-d-i-v-e-container38">
+              <span class="d-e-e-p-d-i-v-e-text353">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text354">9</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container39">
+              <h1 class="d-e-e-p-d-i-v-e-text355">
+                Natural Language Processing
+              </h1>
+              <span class="d-e-e-p-d-i-v-e-text356">
+                <span>You’re getting closer to the end.</span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text359">
+                <br class="d-e-e-p-d-i-v-e-text360" />
+                <span>
+                  Natural Language Processing (NLP) is a topic in artificial
+                  intelligence that focuses on machines or algorithms that are
+                  designed to understand natural language as voice or text data.
+                  “Understanding” in NLP is more than just knowledge of the
+                  word’s meaning but it also includes understanding elements
+                  such as the mood and intent of the speaker, even sarcasm (IBM
+                  Cloud Education, 2020b).
+                </span>
+                <br />
+                <br />
+              </span>
+              <div class="d-e-e-p-d-i-v-e-div09">
+                <dangerous-html
+                  html="<iframe width='560' height='315' src='https://www.youtube.com/embed/X07ouQ_pM3g' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+                ></dangerous-html>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text364">
+                <span class="d-e-e-p-d-i-v-e-text365">Theory:</span>
+                <span class="d-e-e-p-d-i-v-e-text366">
+                  In I, Robot (2004), Sonny the robot was secretly implemented
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text367" />
+                <span class="d-e-e-p-d-i-v-e-text368">with&nbsp;</span>
+                <span class="d-e-e-p-d-i-v-e-text369">
+                  NLP to respond to Will Smith’s rhetorical questions with great
+                  sarcasm.
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text370" />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text372">
+                <span>
+                  There are various ways to achieve NLP. For generative AI, NLP
+                  requires a combination of deep learning algorithms and a
+                  “rule-based model of human language,” referred to as
+                  computational linguistics. Together, DL algorithms and
+                  computational linguistics can mimic how the human mind
+                  understands the arbitrariness of natural languages through
+                  both written and spoken words (IBM Cloud Education, 2020b).
+                </span>
+                <br />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text376">
+                <span>
+                  Now that the underlying terms, learning approaches, and
+                  machine learning techniques had been laid out, it is now
+                  possible to discuss how humanity had arrived from Artificial
+                  Intelligence to Text-to-Image Generation.
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card09">
+            <div class="d-e-e-p-d-i-v-e-container40">
+              <span class="d-e-e-p-d-i-v-e-text379">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text380">10</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container41">
+              <h1 class="d-e-e-p-d-i-v-e-text381">Narrative Timeline</h1>
+              <span class="d-e-e-p-d-i-v-e-text382">
+                <span>
+                  Hold up...remember the last time you took a cold shower?
+                </span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text385">
+                <br class="d-e-e-p-d-i-v-e-text386" />
+                <span>
+                  The field of Artificial Intelligence was born in 1956 when
+                  computer scientists and mathematicians held a six-week
+                  research workshop at Dartmouth College regarding “machines
+                  that can think” (Moor, 2006). 9 years after, an algorithm
+                  similar to the idea of deep learning was introduced by
+                  mathematicians Ivakhnenko and Lapa to analyze algebraic
+                  concepts (Tiwari et al., 2018).
+                </span>
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text389">
+                <br class="d-e-e-p-d-i-v-e-text390" />
+                <span class="d-e-e-p-d-i-v-e-text391">
+                  BEFORE AI WAS CALLED AI, SOME NAMES FOR IT WERE
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text392" />
+                <br class="d-e-e-p-d-i-v-e-text393" />
+                <span class="d-e-e-p-d-i-v-e-text394">
+                  THINKING MACHINES, CYBERNETICS, AUTOMATA THEORY,
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text395" />
+                <br class="d-e-e-p-d-i-v-e-text396" />
+                <span class="d-e-e-p-d-i-v-e-text397">
+                  AND COMPLEX INFORMATION PROCESSING
+                </span>
+                <span></span>
+                <br />
+                <span>(McCorduck, 2004).</span>
+                <br />
+                <br />
+              </span>
+              <span class="d-e-e-p-d-i-v-e-text403">
+                <span>
+                  Deep learning used to suffer from barriers—such as the lack of
+                  large datasets and strong computing power—thdat block its
+                  fullest potential. However—decades after its
+                  inception—numerous leaps and bounds in various technologies
+                  made it possible to breach the said barriers (Marr, 2021).
+                </span>
+                <br />
+                <br />
+                <span class="d-e-e-p-d-i-v-e-text407">
+                  •&nbsp; &nbsp;&nbsp;
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text408">First</span>
+                <span class="d-e-e-p-d-i-v-e-text409">
+                  , the Internet meant that a massive amount of content is now
+                  available for distribution and consumption at a single
+                  converged digital space—a perfect location to create a large
+                  dataset (McCorduck, 2004).
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text410" />
+                <span class="d-e-e-p-d-i-v-e-text411">
+                  •&nbsp; &nbsp;&nbsp;
+                </span>
+                <span class="d-e-e-p-d-i-v-e-text412">Second</span>
+                <span class="d-e-e-p-d-i-v-e-text413">
+                  , the wide availability of graphics-processing hardware such
+                  as GPUs gave access to computing power that is both cheaper
+                  and more powerful than its predecessors (Brighterion, 2017).
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text414" />
+                <span class="d-e-e-p-d-i-v-e-text415">•&nbsp; &nbsp;</span>
+                <span class="d-e-e-p-d-i-v-e-text416">&nbsp;</span>
+                <span class="d-e-e-p-d-i-v-e-text417">Finally</span>
+                <span class="d-e-e-p-d-i-v-e-text418">
+                  , within the field of AI itself, algorithmic advances result
+                  in much more efficient machine learning (Tiwari et al., 2018).
+                  Specifically for generative AI, these advances come in the
+                  form of pattern recognition technology (from DL algorithms)
+                  and Natural Language Processing.
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text419" />
+                <br class="d-e-e-p-d-i-v-e-text420" />
+                <span class="d-e-e-p-d-i-v-e-text421">
+                  In 2015, AI technology exploded and reached a point of no
+                  return. Generative AI made automated image captions possible,
+                  DL algorithms were able to automatically label images and with
+                  the help of NLP, output those labels as natural languages—in
+                  simpler terms, provide images with automatic English captions.
+                  This image-to-text technology was reversed the following year
+                  to generate entirely new images just from a few words
+                  (text-to-image generation) (Vox, 2022).
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text422" />
+                <br class="d-e-e-p-d-i-v-e-text423" />
+                <span class="d-e-e-p-d-i-v-e-text424">
+                  Eventually, these developments led to a domino effect wherein
+                  modern generative AI in 2022 could create novel images that
+                  are technically indiscernible to the style that it aims to
+                  mimic, from photorealism to cartoons—in other words, modern AI
+                  Image Generation (Vox, 2022b).
+                </span>
+                <br class="d-e-e-p-d-i-v-e-text425" />
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card10">
+            <div class="d-e-e-p-d-i-v-e-container42">
+              <span class="d-e-e-p-d-i-v-e-text427">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text428">11</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container43">
+              <div class="d-e-e-p-d-i-v-e-container44">
+                <div class="d-e-e-p-d-i-v-e-container45">
+                  <div class="d-e-e-p-d-i-v-e-container46">
+                    <div class="d-e-e-p-d-i-v-e-container47">
+                      <div class="d-e-e-p-d-i-v-e-container48">
+                        <div class="d-e-e-p-d-i-v-e-container49">
+                          <div class="d-e-e-p-d-i-v-e-container50">
+                            <div class="d-e-e-p-d-i-v-e-container51">
+                              <div class="d-e-e-p-d-i-v-e-container52">
+                                <h1 class="d-e-e-p-d-i-v-e-text429">
+                                  Generative AI
+                                </h1>
+                                <span class="d-e-e-p-d-i-v-e-text430">
+                                  <span>
+                                    As Nietzsche puts it, “if you stare into the
+                                    abyss, the abyss tells
+                                  </span>
+                                  <br />
+                                  <span>you about AI”... right?</span>
+                                  <br />
+                                </span>
+                                <span class="d-e-e-p-d-i-v-e-text435">
+                                  <br class="d-e-e-p-d-i-v-e-text436" />
+                                  <span class="d-e-e-p-d-i-v-e-text437">
+                                    Generative AI models
+                                  </span>
+                                  <span>
+                                    power AI Image Generation. They refer to
+                                    complex deep learning algorithms that
+                                    understand the structure of an unlabeled
+                                    dataset, such as pictures with captions, and
+                                    create completely original products—with the
+                                    goal of making them as close as possible to
+                                    the “real” thing (Generative AI Models,
+                                    2022).
+                                  </span>
+                                  <br />
+                                  <br />
+                                </span>
+                                <span
+                                  id="lvl11_p2"
+                                  class="d-e-e-p-d-i-v-e-text441"
+                                >
+                                  <span>
+                                    To understand its dataset structure,
+                                    generative models use a combination of
+                                    limited supervised learning and unsupervised
+                                    learning, referred to as
+                                  </span>
+                                  <span class="d-e-e-p-d-i-v-e-text443">
+                                    semi-supervised learning
+                                  </span>
+                                  <span>
+                                    (Generative AI Models, 2022). In comparison
+                                    to supervised and unsupervised learning,
+                                    semi-supervised learning is a machine
+                                    learning approach that extracts knowledge
+                                    from datasets by determining
+                                  </span>
+                                  <span class="d-e-e-p-d-i-v-e-text445">
+                                    features
+                                  </span>
+                                  <span>
+                                    on pieces of data (limited supervised) and
+                                    then classifying them into meaningful
+                                  </span>
+                                  <span class="d-e-e-p-d-i-v-e-text447">
+                                    categories
+                                  </span>
+                                  <span>(unsupervised).</span>
+                                  <br />
+                                </span>
+                                <span class="d-e-e-p-d-i-v-e-text450">
+                                  <br class="d-e-e-p-d-i-v-e-text451" />
+                                  <span>
+                                    For a deeper understanding, generative
+                                    models can be compared to machine learning
+                                    algorithms that only use supervised
+                                    learning, these can be referred to as
+                                  </span>
+                                  <span class="d-e-e-p-d-i-v-e-text453">
+                                    discriminative AI models
+                                  </span>
+                                  <span>
+                                    . Discriminative models are not used for AI
+                                    generation but for machine learning
+                                    prediction. They are provided with
+                                    hand-coded rules by human developers and
+                                    these rules refer to existing data points
+                                    with their relationship to each other
+                                    already pre-established. The discriminative
+                                    model will analyze new information and
+                                    predict a label for it using its hand-coded
+                                    rules as the basis (Generative AI Models,
+                                    2022).
+                                  </span>
+                                  <br />
+                                  <br />
+                                  <span>
+                                    For example, a discriminative AI model is
+                                    taught that bananas are yellow and apples
+                                    are red.
+                                  </span>
+                                  <br />
+                                </span>
+                                <div class="d-e-e-p-d-i-v-e-div10">
+                                  <dangerous-html
+                                    html="<html>
+    <body>
+        <a href='https://ibb.co/bgzjJ4q'><img src='https://i.ibb.co/C5hp2jN/FIG07.png' alt='FIG07' border='0'></a>
+        </body>
+</html>"
+                                  ></dangerous-html>
+                                </div>
+                              </div>
+                              <span>
+                                <span>
+                                  If presented with a yellow balloon, the model
+                                  will return an answer that tells that the
+                                  yellow balloon is not an apple but something
+                                  that is probably similar to a banana.
+                                </span>
+                                <br />
+                                <br />
+                              </span>
+                            </div>
+                            <div class="d-e-e-p-d-i-v-e-div11">
+                              <dangerous-html
+                                html="<html>
+    <body>
+        <a href='https://ibb.co/Xb3TXX4'><img src='https://i.ibb.co/jTWFhh5/FIG08.png' alt='FIG08' border='0'></a>
+        </body>
+        </html>"
+                              ></dangerous-html>
+                            </div>
+                          </div>
+                        </div>
+                        <span>
+                          <span>
+                            In short, a discriminative model contains
+                            information about bananas and apples but it does not
+                            exactly know what makes a banana or what an apple
+                            is.
+                          </span>
+                          <br />
+                          <br />
+                          <span>
+                            In contrast, generative AI models try to answer
+                            “what makes a banana?” using semi-supervised
+                            learning. Going back to our example, a generative AI
+                            model is given a dataset with a specific label that
+                            consists of a picture of a banana with an image
+                            caption (limited supervised learning), then it tries
+                            to determine the possible features of the banana
+                            using deep learning (unsupervised learning).
+                          </span>
+                          <br />
+                          <br />
+                        </span>
+                      </div>
+                    </div>
+                    <div class="d-e-e-p-d-i-v-e-code-embed">
+                      <dangerous-html
+                        html="<html>
+    <body>
+        <a href='https://ibb.co/kDHM1b8'><img src='https://i.ibb.co/myDS8Zq/FIG09.png' alt='FIG09' border='0'></a>
+        </body>
+        </html>"
+                      ></dangerous-html>
+                    </div>
+                  </div>
+                  <span>
+                    <span>
+                      The generative model does not only know that a banana is
+                      yellow, but it also knows its shape, texture, other
+                      incomprehensible characteristics such as “
+                    </span>
+                    <a href="#banana 4" class="d-e-e-p-d-i-v-e-link15">
+                      banana-ness
+                    </a>
+                    <span>
+                      ,” and the relationship of Bananas with other concepts.
+                      Therefore, if the generative model truly knows “what makes
+                      a banana” from an image with a caption, then it follows
+                      that it can recreate an entirely new image of a banana.
+                    </span>
+                    <br />
+                    <br />
+                  </span>
+                </div>
+                <div class="d-e-e-p-d-i-v-e-div12">
+                  <dangerous-html
+                    html="<html>
+    <body>
+        <a href='https://ibb.co/v3zpj78'><img src='https://i.ibb.co/6HszW35/FIg10.png' alt='FIg10' border='0'></a>
+        </body>
+        </html>"
+                  ></dangerous-html>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-card11">
+            <div class="d-e-e-p-d-i-v-e-container53">
+              <span class="d-e-e-p-d-i-v-e-text475">LEVEL</span>
+              <span class="d-e-e-p-d-i-v-e-text476">12</span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-container54">
+              <div class="d-e-e-p-d-i-v-e-container55">
+                <div class="d-e-e-p-d-i-v-e-container56">
+                  <div class="d-e-e-p-d-i-v-e-container57">
+                    <div class="d-e-e-p-d-i-v-e-container58">
+                      <div class="d-e-e-p-d-i-v-e-container59">
+                        <div class="d-e-e-p-d-i-v-e-container60">
+                          <div class="d-e-e-p-d-i-v-e-container61">
+                            <h1 class="d-e-e-p-d-i-v-e-text477">
+                              AI Image Generation
+                            </h1>
+                            <span class="d-e-e-p-d-i-v-e-text478">
+                              <span>You have arrived.</span>
+                              <br />
+                            </span>
+                            <span class="d-e-e-p-d-i-v-e-text481">
+                              <br class="d-e-e-p-d-i-v-e-text482" />
+                              <span>
+                                By now, everything under the belt of AI to the
+                                specifics of Text-to-Image generation had been
+                                discussed, all that is left is the technology
+                                itself.
+                              </span>
+                              <br />
+                              <br />
+                              <span>
+                                Generative AI models built with deep learning
+                                and Natural Language Processing would result in
+                                a breakthrough technology called
+                                Transformer-based models. The most prominent
+                                example of a transformer-based model is GPT-3
+                                (Generative Pre-Trained 3), GPT-3 is the third
+                                generation of a generative AI that was built by
+                                a major AI research laboratory and company
+                                called OpenAI (Generative AI Models, 2022).
+                              </span>
+                              <br />
+                              <br />
+                              <span>
+                                Using GPT-3 along with other various AI
+                                technologies, OpenAI was able to launch an AI
+                                Image Generator called DALL-E in January 2021
+                                and its upgrade, DALL-E 2, the following year.
+                                OpenAI claims that DALL-E 2 can “create
+                                realistic images and art from a description in
+                                natural language” (DALL-E 2, n.d.).
+                              </span>
+                              <br />
+                              <br />
+                              <span>
+                                It is to be noted that there are other
+                                variations of generative AI models such as
+                                Generative Adversarial Networks or GANs. Since
+                                GANs and transformer-based models have the same
+                                output—in this context as AI-generated
+                                images—GANs would no longer be discussed in this
+                                guide (Generative AI Models, 2022).
+                              </span>
+                              <br />
+                              <br />
+                              <span>
+                                Prior to deep learning, DALL-E first requires a
+                                gargantuan and diverse dataset for training.
+                                OpenAI solves this problem by collecting
+                                hundreds of millions of alt text and their
+                                corresponding images all over the Web. Alt text
+                                refers to text descriptions that people add when
+                                uploading images on the web for the purpose of
+                                web accessibility and allowing it to be easily
+                                organized by search engines (i.e., search engine
+                                indexation). With this, OpenAI was able to
+                                satisfy the requirements of DALL-E without
+                                having the need to manually tag images with
+                                captions and create hand-coded rules, hence a
+                                dataset with very minimal labels (limited
+                                supervised learning) (Vox, 2022a).
+                              </span>
+                              <br />
+                              <br />
+                              <span>
+                                DALL-E then proceeds to feed on its massive
+                                dataset to allow its transformer-based model to
+                                generate images. The transformer-based model can
+                                generally be separated into two parts: encoder
+                                and decoder (Generative AI Models, 2022).
+                              </span>
+                              <br />
+                            </span>
+                            <div class="d-e-e-p-d-i-v-e-div13">
+                              <dangerous-html
+                                html="<html>
+    <body>
+        <a href='https://ibb.co/Pz1RXVf'><img src='https://i.ibb.co/3YSw6PL/FIG11.png' alt='FIG11' border='0'></a>
+        </body>
+        </html>"
+                              ></dangerous-html>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="d-e-e-p-d-i-v-e-text500">
+                        <span>
+                          The encoder is what feeds onto the input/dataset
+                          (Generative AI Models, 2022). It tries to extract all
+                          the features present in an image and its corresponding
+                          text description, and convert them into meaningful
+                          categories to pass to the decoder.
+                        </span>
+                        <br />
+                        <br />
+                        <span>
+                          What the “extract all the features” and “convert them
+                          into meaningful categories” actually mean is that the
+                          encoder determines “features” of the image (as pixel
+                          values) and converts them as vectors or “meaningful
+                          categories” to separate them from one another in a
+                          mathematical space—this concept is known as latent
+                          space (Vox, 2022a). Then using these categories, the
+                          encoder matches the images to their text descriptions
+                          a thousand times until it figures out a method that is
+                          “good enough”—this is what is referred to as deep
+                          learning (Generative AI Models, 2022); see also (Vox,
+                          2022a).
+                        </span>
+                        <br />
+                        <br />
+                        <span>
+                          DALL-E is not only required to understand what makes a
+                          banana but it is also tasked to determine what makes
+                          other things and how are they different or similar
+                          from bananas. In other words, generative AI models, in
+                          general, do not only define what an object is but also
+                          define its relationship with other objects.
+                        </span>
+                        <br />
+                        <br />
+                      </span>
+                      <div class="d-e-e-p-d-i-v-e-div14">
+                        <dangerous-html
+                          html="<html>
+    <body>
+        <a href='https://ibb.co/GnC8n65'><img src='https://i.ibb.co/XjFKjQC/FIG12.png' alt='FIG12' border='0'></a>
+        </body>
+        </html>"
+                        ></dangerous-html>
+                      </div>
+                    </div>
+                  </div>
+                  <span>
+                    <span>
+                      In reality, DALL-E creates at least 500 categories for
+                      each feature (Vox, 2022a), it follows that humans do not
+                      have all the words to describe these, resulting in
+                      incomprehensible regions of information like “banana-ness”
+                      amongst many, many other things.
+                    </span>
+                    <br />
+                    <br />
+                    <span>
+                      Once the encoder creates the meaningful categories, the
+                      decoder “receives” them to create an output of generated
+                      novel images. The decoder achieves this through the use of
+                      a mechanism called Diffusion that “picks” a mathematical
+                      point/value in the latent space, then translates it to an
+                      image pixel. The combination of image pixels first starts
+                      out as noise and then eventually becomes a “proper” image
+                      after a series of iterations (Generative AI Models, 2022;
+                      see also Vox, 2022a).
+                    </span>
+                    <br />
+                    <br />
+                  </span>
+                  <div class="d-e-e-p-d-i-v-e-div15">
+                    <dangerous-html
+                      html="<html>
+    <body>
+        <a href='https://ibb.co/0JJxwST'><img src='https://i.ibb.co/s33ZBGn/FIG13.png' alt='FIG13' border='0'></a>
+        </body>
+        </html>"
+                    ></dangerous-html>
+                  </div>
+                </div>
+                <span class="d-e-e-p-d-i-v-e-text517">
+                  <span>
+                    Because of the randomness of diffusion, it will never return
+                    the same image from the same set of words, also referred to
+                    as prompts (Vox, 2022a).
+                  </span>
+                  <br />
+                  <br />
+                  <span>
+                    Prompting, prompt engineering, or prompt craft is the
+                    terminology used for the art of writing prompts for an AI
+                    Image Generator (Vox, 2022a).
+                  </span>
+                  <br />
+                </span>
+                <div class="d-e-e-p-d-i-v-e-div16">
+                  <dangerous-html
+                    html="<html>
+    <body>
+        <a href='https://ibb.co/3cM3fvk'><img src='https://i.ibb.co/NKmv1r7/FIG14.png' alt='FIG14' border='0'></a>
+        </body>
+        </html>"
+                  ></dangerous-html>
+                </div>
+              </div>
+              <span class="d-e-e-p-d-i-v-e-text523">
+                <span>
+                  With pruney fingers, you find yourself some buttons at the
+                  deepest depths of the sea...
+                </span>
+                <br />
+                <span>
+                  And hopefully, YOU now understand AI Image Generation.
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="d-e-e-p-d-i-v-e-section-separator"></div>
+        <footer class="d-e-e-p-d-i-v-e-footer">
+          <div class="d-e-e-p-d-i-v-e-footer-container">
+            <div class="d-e-e-p-d-i-v-e-logo1">
+              <a href="##Landing Page" class="d-e-e-p-d-i-v-e-link16">
+                <img
+                  alt="image"
+                  src="public/playground_assets/artboard%201-400w.png"
+                  class="d-e-e-p-d-i-v-e-image2"
+                />
+              </a>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-group-information">
+              <span class="d-e-e-p-d-i-v-e-text528">GROUP J</span>
+              <span class="d-e-e-p-d-i-v-e-text529">
+                <span class="d-e-e-p-d-i-v-e-text530">MMS 142</span>
+                <br class="d-e-e-p-d-i-v-e-text531" />
+                <span class="d-e-e-p-d-i-v-e-text532">
+                  Internet Technologies
+                </span>
+                <br />
+              </span>
+            </div>
+            <div class="d-e-e-p-d-i-v-e-links-container">
+              <div class="d-e-e-p-d-i-v-e-members">
+                <div class="d-e-e-p-d-i-v-e-content-team">
+                  <div class="d-e-e-p-d-i-v-e-container62">
+                    <div class="d-e-e-p-d-i-v-e-container63">
+                      <div class="d-e-e-p-d-i-v-e-product-container">
+                        <span class="d-e-e-p-d-i-v-e-text534">
+                          Content Team
+                        </span>
+                        <li class="list-item">
+                          <span class="d-e-e-p-d-i-v-e-text535">
+                            Umali, Marianne
+                          </span>
+                        </li>
+                      </div>
+                      <li class="list-item">
+                        <span class="d-e-e-p-d-i-v-e-text536">
+                          Velo, Christian Paul
+                        </span>
+                      </li>
+                      <li class="d-e-e-p-d-i-v-e-li18 list-item">
+                        <span>Verzola, Pio Jr</span>
+                      </li>
+                      <li class="list-item">
+                        <span class="d-e-e-p-d-i-v-e-text538">
+                          Villanueva, Cyrille
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <span class="d-e-e-p-d-i-v-e-text539">
+                          Yango, Peter Samuel
+                        </span>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-e-e-p-d-i-v-e-website-team">
+                  <span class="d-e-e-p-d-i-v-e-text540">Website Team</span>
+                  <li class="list-item">
+                    <span class="d-e-e-p-d-i-v-e-text541">
+                      Timon, Patricia Mae
+                    </span>
+                  </li>
+                  <li class="d-e-e-p-d-i-v-e-li22 list-item">
+                    <span>
+                      <span>Tomacruz, Jana Denise</span>
+                      <br />
+                    </span>
+                  </li>
+                  <li class="list-item">
+                    <span class="d-e-e-p-d-i-v-e-text545">Torres, Aleah</span>
+                  </li>
+                  <div class="d-e-e-p-d-i-v-e-container64">
+                    <li class="list-item"></li>
+                    <span class="d-e-e-p-d-i-v-e-text546">
+                      Tupan, Charleigh Belle
+                    </span>
+                  </div>
+                  <div class="d-e-e-p-d-i-v-e-container65">
+                    <li class="list-item">
+                      <span class="d-e-e-p-d-i-v-e-text547">
+                        Yacat, Ma. Xenia
+                      </span>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-e-e-p-d-i-v-e-separator1"></div>
+          <div class="d-e-e-p-d-i-v-e-license">
+            <div class="d-e-e-p-d-i-v-e-container66">
+              <div class="d-e-e-p-d-i-v-e-container67">
+                <img
+                  alt="image"
+                  src="public/playground_assets/cc-200h.png"
+                  class="d-e-e-p-d-i-v-e-image3"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/person-200h.png"
+                  class="d-e-e-p-d-i-v-e-image4"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/share-200h.png"
+                  class="d-e-e-p-d-i-v-e-image5"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/commercial-200h.png"
+                  class="d-e-e-p-d-i-v-e-image6"
+                />
+              </div>
+            </div>
+          </div>
+          <span class="d-e-e-p-d-i-v-e-text548">School Year 2022 — 2023</span>
+          <span class="d-e-e-p-d-i-v-e-text549">1st Trimester</span>
+        </footer>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>

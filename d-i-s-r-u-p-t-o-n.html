@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DISRUPT-ON - AI in Art</title>
+    <meta property="og:title" content="DISRUPT-ON - AI in Art" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Open Sans;
+        font-size: 18px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+      html {
+      scroll-behavior: smooth;
+      }
+    </style>
+    <style data-section-id="dropdown">
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html@0.1.11/dist/default/lib.umd.js"
+      ></script>
+      <link href="./d-i-s-r-u-p-t-o-n.css" rel="stylesheet" />
+
+      <div class="d-i-s-r-u-p-t-o-n-container">
+        <div class="d-i-s-r-u-p-t-o-n-navbar">
+          <div class="d-i-s-r-u-p-t-o-n-logo">
+            <img
+              alt="image"
+              src="public/playground_assets/artboard%201-400w.png"
+              class="d-i-s-r-u-p-t-o-n-image"
+            />
+          </div>
+          <div class="d-i-s-r-u-p-t-o-n-links-container">
+            <a href="index.html" class="d-i-s-r-u-p-t-o-n-link Anchor">HOME</a>
+            <a href="d-e-e-p-d-i-v-e.html" class="d-i-s-r-u-p-t-o-n-link01">
+              DEEP DIVE
+            </a>
+            <a href="d-i-s-r-u-p-t-o-n.html" class="d-i-s-r-u-p-t-o-n-link02">
+              <span class="d-i-s-r-u-p-t-o-n-text">DISRUPT: ON</span>
+              <br />
+            </a>
+            <a
+              href="b-e-y-o-n-d-g-e-n-e-r-a-t-i-o-n.html"
+              class="d-i-s-r-u-p-t-o-n-link03"
+            >
+              BEYOND
+            </a>
+            <a href="r-e-f-e-r-e-n-c-e-s.html" class="d-i-s-r-u-p-t-o-n-link04">
+              REFERENCES
+            </a>
+          </div>
+          <div class="d-i-s-r-u-p-t-o-n-cta-container">
+            <div data-role="BurgerMenu" class="d-i-s-r-u-p-t-o-n-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="d-i-s-r-u-p-t-o-n-icon">
+                <path
+                  d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div data-role="MobileMenu" class="d-i-s-r-u-p-t-o-n-mobile-menu">
+            <div class="d-i-s-r-u-p-t-o-n-top">
+              <img
+                alt="image"
+                src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
+                class="d-i-s-r-u-p-t-o-n-image1"
+              />
+              <div
+                data-role="CloseMobileMenu"
+                class="d-i-s-r-u-p-t-o-n-container01"
+              >
+                <svg viewBox="0 0 1024 1024" class="d-i-s-r-u-p-t-o-n-icon02">
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="d-i-s-r-u-p-t-o-n-mid">
+              <div class="d-i-s-r-u-p-t-o-n-links-container1">
+                <a href="#features" class="d-i-s-r-u-p-t-o-n-link05 Anchor">
+                  features
+                </a>
+                <span class="d-i-s-r-u-p-t-o-n-link06 Anchor">services</span>
+                <span class="d-i-s-r-u-p-t-o-n-link07 Anchor">About Us</span>
+                <span class="d-i-s-r-u-p-t-o-n-link08 Anchor">contact</span>
+              </div>
+              <button class="d-i-s-r-u-p-t-o-n-cta-btn button Anchor">
+                sTART BUILDING
+              </button>
+            </div>
+            <div class="d-i-s-r-u-p-t-o-n-bot">
+              <div class="d-i-s-r-u-p-t-o-n-social-links-container">
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="d-i-s-r-u-p-t-o-n-icon04"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="d-i-s-r-u-p-t-o-n-icon06"
+                >
+                  <path
+                    d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="d-i-s-r-u-p-t-o-n-icon08"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Landing Page - Disrupt On" class="d-i-s-r-u-p-t-o-n-banner">
+          <h1 class="d-i-s-r-u-p-t-o-n-text002">Disrupt: On&nbsp;</h1>
+          <span class="d-i-s-r-u-p-t-o-n-text003">
+            Understand how AI Image Generators are changing Creative Industries
+          </span>
+          <div class="d-i-s-r-u-p-t-o-n-separator"></div>
+          <nav class="d-i-s-r-u-p-t-o-n-nav"></nav>
+        </div>
+        <div id="AI Image Generators" class="d-i-s-r-u-p-t-o-n-banner1">
+          <h1 class="d-i-s-r-u-p-t-o-n-text004">AI Image Generators</h1>
+          <div class="d-i-s-r-u-p-t-o-n-container02">
+            <span class="d-i-s-r-u-p-t-o-n-text005">
+              <span>
+                The quality of an AI Image Generator’s output would depend on
+                the caliber of the AI tool and the user’s text prompts. It is
+                therefore important to choose the correct AI Image Generator for
+                the best results.&nbsp;
+              </span>
+              <span>
+                However, there are hundreds of AI Image Generation services
+                present on the web, and some are paid for while others are not.
+              </span>
+              <br />
+              <span></span>
+              <span></span>
+            </span>
+            <div class="d-i-s-r-u-p-t-o-n-container03">
+              <div class="d-i-s-r-u-p-t-o-n-div">
+                <dangerous-html
+                  html="<html>
+    <body>
+        <blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/reel/ClpPW2sAO3M/?utm_source=ig_embed&amp;utm_campaign=loading' data-instgrm-version='14' style=' background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);'><div style='padding:16px;'> <a href='https://www.instagram.com/reel/ClpPW2sAO3M/?utm_source=ig_embed&amp;utm_campaign=loading' style=' background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;' target='_blank'> <div style=' display: flex; flex-direction: row; align-items: center;'> <div style='background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;'></div> <div style='display: flex; flex-direction: column; flex-grow: 1; justify-content: center;'> <div style=' background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;'></div> <div style=' background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;'></div></div></div><div style='padding: 19% 0;'></div> <div style='display:block; height:50px; margin:0 auto 12px; width:50px;'><svg width='50px' height='50px' viewBox='0 0 60 60' version='1.1' xmlns='https://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g transform='translate(-511.000000, -20.000000)' fill='#000000'><g><path d='M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631'></path></g></g></g></svg></div><div style='padding-top: 8px;'> <div style=' color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;'>View this post on Instagram</div></div><div style='padding: 12.5% 0;'></div> <div style='display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;'><div> <div style='background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);'></div> <div style='background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;'></div> <div style='background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);'></div></div><div style='margin-left: 8px;'> <div style=' background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;'></div> <div style=' width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)'></div></div><div style='margin-left: auto;'> <div style=' width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);'></div> <div style=' background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);'></div> <div style=' width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);'></div></div></div> <div style='display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;'> <div style=' background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;'></div> <div style=' background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;'></div></div></a><p style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;'><a href='https://www.instagram.com/reel/ClpPW2sAO3M/?utm_source=ig_embed&amp;utm_campaign=loading' style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;' target='_blank'>A post shared by Noah Miller (@noahrobertmiller)</a></p></div></blockquote> <script async src='//www.instagram.com/embed.js'></script>
+        </body>
+        </html>
+        "
+                ></dangerous-html>
+              </div>
+            </div>
+          </div>
+          <span class="d-i-s-r-u-p-t-o-n-text011">
+            As such, the following table presents a list of AI Image Generators
+            and price information for reference:
+          </span>
+          <div id="AI Table" class="d-i-s-r-u-p-t-o-n-div1">
+            <dangerous-html
+              id="AI Table"
+              html="<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<div style='position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;'>
+  <iframe loading='lazy' style='position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;'
+    src='https://www.canva.com/design/DAFVE9zYjKM/view?embed' allowfullscreen='allowfullscreen' allow='fullscreen'>
+  </iframe>
+</div>
+<a href='https://www.canva.com/design/DAFVE9zYjKM/view?utm_content=DAFVE9zYjKM&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link' target='_blank' rel='noopener'></a> 
+</body>
+</html>"
+            ></dangerous-html>
+          </div>
+          <span class="d-i-s-r-u-p-t-o-n-text012">
+            <span>
+              In general, it is quite intuitive to use these AI Image Generators
+              as the user would only need to write in a text field the prompt
+              for the image they wish to create. The AI tool would then generate
+              an image or a set of images that would best match the user’s
+              prompt.
+            </span>
+            <br />
+            <br />
+            <span>
+              When it comes to image generation, AI Image Generators can compose
+              them in a number of ways. In Midjourney for example, after
+              selecting from the generated images, the user can choose to
+              upscale the resolution and/or generate more “varied” altered
+              versions of a previously generated image. The user can also run
+              through an image recursively until they are satisfied with the
+              result.
+            </span>
+            <br />
+            <br />
+          </span>
+          <div class="d-i-s-r-u-p-t-o-n-container04">
+            <div class="d-i-s-r-u-p-t-o-n-div2">
+              <dangerous-html
+                html="<html>
+    <body>
+        <a href='https://ibb.co/wL7gdzg'><img src='https://i.ibb.co/GJ9pd5p/Screenshot-59.png' alt='Screenshot-59' border='0'></a>
+        </body>
+        </html>"
+              ></dangerous-html>
+            </div>
+            <span class="d-i-s-r-u-p-t-o-n-text019">
+              Midjourney generating an image using a command prompt.
+            </span>
+          </div>
+          <span class="d-i-s-r-u-p-t-o-n-text020">
+            <span>
+              Essentially, if one is creative enough with their prompts, a
+              promising AI Image Generator can deliver. This means that “weak”
+              prompts that are inputted into AI Image Generators may produce
+              not-so-great results.
+            </span>
+            <br />
+            <br />
+            <span>
+              There are also cases wherein it is not the fault of the user as
+              there are visual errors within the image due to gaps in the AI
+              tool’s training. For example, a generated image containing a human
+              figure may have wrong proportions such as having multiple arms or
+              anatomically incorrect hands. As a result, professional artists or
+              enthusiasts edit these errors on their own image-editing software.
+              In this way, people can create
+            </span>
+            <span class="d-i-s-r-u-p-t-o-n-text025">“art”</span>
+            <span>without the need to follow the usual creative process.</span>
+            <br />
+            <br />
+            <span>
+              As an alternative use, however, artists may also utilize AI Image
+              Generators to augment their creative process, this is mostly done
+              by generating images...
+            </span>
+            <br />
+            <br />
+            <span>1... to help them roughly visualize a planned artwork.</span>
+            <br />
+            <span>
+              2. aid them in the generation of ideas for concept art/design.
+            </span>
+            <br />
+            <span>
+              3. or generate various images so that they may use them for photo
+              bashing. Photo bashing is an act of cutting out an element from an
+              image (Stock Photo, 3D renders, etc.) and then incorporating it
+              within a larger artwork with heavy edits so that it fits visually.
+              (Duff, 2022; see also Blevins, 2022).
+            </span>
+            <br />
+          </span>
+          <span class="d-i-s-r-u-p-t-o-n-text038">
+            <span>
+              A comprehensive way to summarize the amazing capacities of popular
+              AI Image Generators is to have them dramatically compete with one
+              another by having their outputs compared on the basis of rigorous
+              specifications, as shown in a video by a YouTuber (Nobody &amp;
+              The Computer) below:
+            </span>
+            <br />
+          </span>
+          <div>
+            <dangerous-html
+              html="<html>
+    <title> v2 </title>
+    <body>
+        <iframe width='560' height='315' src='https://www.youtube.com/embed/qSQV8gMnSYU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+    </body>
+</html>"
+            ></dangerous-html>
+          </div>
+        </div>
+        <div id="Accessibility Review" class="d-i-s-r-u-p-t-o-n-banner2">
+          <h1 class="d-i-s-r-u-p-t-o-n-text041">Accessibility Review</h1>
+          <span class="d-i-s-r-u-p-t-o-n-text042">
+            <span>In the list of</span>
+            <a href="#AI Table" class="d-i-s-r-u-p-t-o-n-link09">
+              AI Image Generators
+            </a>
+            <span>
+              provided above, accessibility can be reviewed in terms of costs,
+              hardware requirement, or third-party integration.
+            </span>
+            <br />
+            <br />
+            <span class="d-i-s-r-u-p-t-o-n-text047">ON COST:</span>
+            <br class="d-i-s-r-u-p-t-o-n-text048" />
+            <br />
+            <span>•&nbsp;</span>
+            <span>
+              From the given table, it is clear that not all AI Image Generators
+              come for free.
+            </span>
+            <br />
+            <span>
+              • Some offer a limited trial period before asking the user to pay
+              for their services. Midjourney, for example, has a limit of 25
+              artworks for their free trial. Users exceeding the limit are
+              required to subscribe to a plan. DALL-E, on the other hand, uses a
+              “credit” system, users spend “credits” to generate a set of
+              images. Free users start with 50 credits and receive an additional
+              15 credits every month.
+            </span>
+            <br />
+            <span>
+              • For the common folk, paid subscriptions may be judged as too
+              expensive, especially if the said user would only use AI Image
+              Generation as a novelty.
+            </span>
+            <br />
+            <span>
+              • For professional artists/enthusiasts that are interested in
+              incorporating AI tools in their workflow or subsequent projects,
+              an investment in a proper AI art generator could prove to be very
+              helpful.
+            </span>
+            <br />
+            <br />
+            <span class="d-i-s-r-u-p-t-o-n-text060">
+              ON HARDWARE REQUIREMENT:
+            </span>
+            <br class="d-i-s-r-u-p-t-o-n-text061" />
+            <br />
+            <span>
+              • Although most of the AI Image generators provided are accessible
+              to the public, some like Stable Diffusion requires mid-level to
+              high-end hardware to operate smoothly. This is because Stable
+              Diffusion is more powerful in comparison to other image generators
+              like
+            </span>
+            <a
+              href="https://deepai.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="d-i-s-r-u-p-t-o-n-link10"
+            >
+              DeepAI
+            </a>
+            <span>.</span>
+            <br />
+            <span>
+              • There are AI Image Generators that are specifically designed for
+              smart mobile devices, like StarryAI.
+            </span>
+            <br />
+            <br />
+            <span class="d-i-s-r-u-p-t-o-n-text069">
+              ON THIRD PARTY INTEGRATION:
+            </span>
+            <br class="d-i-s-r-u-p-t-o-n-text070" />
+            <br />
+            <span>
+              • Some AI tools require users to have another third-party account,
+              Midjourney, for example, requires Discord (a instant messaging
+              social platform) for interaction with its features.
+            </span>
+            <br />
+            <span>
+              • Some AI tools also require account creation or having their
+              program installed.
+            </span>
+            <br />
+            <br />
+            <span>
+              Besides being a powerful image generator (Stable Diffusion 2,
+              Midjourney, and Dall-E 2), accessibility is an important factor in
+              the disruptiveness of a piece of technology. If the tool is highly
+              accessible, it can spread much faster to other user bases. For
+              example, Starry AI is a free mobile application that can target
+              smartphone users that caught wind of the AI Text-to-Image
+              technology.
+            </span>
+            <span></span>
+            <br />
+          </span>
+          <span id="accesibility" class="d-i-s-r-u-p-t-o-n-text080">
+            <span>
+              From the information listed above, it can be highly suggested that
+              the most accessible AI Image Generators from the list are those
+              that are completely free and are based on cloud services (Craiyon
+              and Latent Diffusion). This is because they are accessible on the
+              go and present on various platforms/devices. It is to be noted,
+              however, that accessibility does not translate to quality
+              performance and one should also look into the AI tool’s
+            </span>
+            <a href="#AI Table" class="d-i-s-r-u-p-t-o-n-link11">
+              individual capability
+            </a>
+            <span>as well.</span>
+            <br />
+          </span>
+        </div>
+        <div id="Visual Gallery" class="d-i-s-r-u-p-t-o-n-banner3">
+          <div class="d-i-s-r-u-p-t-o-n-container05">
+            <h1 class="d-i-s-r-u-p-t-o-n-text084">Visual Gallery</h1>
+          </div>
+          <span class="d-i-s-r-u-p-t-o-n-text085">
+            <span>Using a popular and powerful AI Image generator</span>
+            <span class="d-i-s-r-u-p-t-o-n-text087">(MidJourney)</span>
+            <span>and its accessible counterparts</span>
+            <span class="d-i-s-r-u-p-t-o-n-text089">
+              (Craiyon and Latent Diffusion)
+            </span>
+            <span>detailed in the</span>
+            <a href="#accesibility" class="d-i-s-r-u-p-t-o-n-link12">
+              previous section
+            </a>
+            <span>, a gallery of AI-generated images are provided below:</span>
+            <br />
+          </span>
+          <div class="d-i-s-r-u-p-t-o-n-gallery">
+            <div class="d-i-s-r-u-p-t-o-n-container06">
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/zuckerberg-1500h.png"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name1"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/cyber-girl-1500h.png"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name3"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/ghost-1500h.png"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name2"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/cyborg-1500h.png"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <span class="d-i-s-r-u-p-t-o-n-text093">
+                <span>Mark Zuckerberg in a Diaper Holding A Can of Beans</span>
+                <br />
+                <span>while watching.</span>
+              </span>
+              <span class="d-i-s-r-u-p-t-o-n-text097">
+                <span>Student wearing headphones while walking in a rainy</span>
+                <br />
+                <span>cyber city.</span>
+              </span>
+              <span class="d-i-s-r-u-p-t-o-n-text101">
+                Ghost lady by the water ethereal beautiful lighting calm river
+                at dawn.
+              </span>
+              <span class="d-i-s-r-u-p-t-o-n-text102">
+                <span>A Cyborg doctor in an</span>
+                <br />
+                <span>Operating Room fixing a</span>
+                <br />
+                <span>Broken motherboard.</span>
+              </span>
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name4"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/zombie-1500h.png"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name5"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/sharshar_fluffy_yeti_holding_a_yeti_doll_and_stomping_on_an_igl_6983f5ed-35b9-4466-b993-4355f8f7a559-1_38_11zon-1500h.png"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name6"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/russian-doll-1500h.png"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <div
+                class="gallery-card31-gallery-card gallery-card31-root-class-name7"
+              >
+                <img
+                  alt="image"
+                  src="public/playground_assets/wednesday-1500h.webp"
+                  class="gallery-card31-image"
+                />
+                <div class="gallery-card31-container"></div>
+              </div>
+              <span class="d-i-s-r-u-p-t-o-n-text108">
+                A Zombie Sitting on a Couch while watching a show.
+              </span>
+              <span class="d-i-s-r-u-p-t-o-n-text109">
+                Fluffy Yeti Holding A Yeti Doll and Stomping on an igloo.
+              </span>
+              <span class="d-i-s-r-u-p-t-o-n-text110">
+                Scary Russian Doll Opening Several Dolls Inside.
+              </span>
+              <span class="d-i-s-r-u-p-t-o-n-text111">
+                Wednesday Addams battles witches using a purple lightsaber.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="d-i-s-r-u-p-t-o-n-banner4">
+          <h1 class="d-i-s-r-u-p-t-o-n-text112">General Disruption</h1>
+          <span class="d-i-s-r-u-p-t-o-n-text113">
+            <span>
+              The breakthrough technology of AI Image Generation pioneers the
+              exploration of new artistic frameworks in creative industries.
+              Just recently an AI image generated from DALL-E 2 made its mark as
+              the First AI-designed magazine cover (Liu, 2022).
+            </span>
+            <br />
+          </span>
+          <div class="d-i-s-r-u-p-t-o-n-container07">
+            <div class="d-i-s-r-u-p-t-o-n-container08">
+              <div class="d-i-s-r-u-p-t-o-n-code-embed">
+                <dangerous-html
+                  html="<html>
+    <title> h3 </title>
+    <body>
+        <img src='https://hips.hearstapps.com/hmg-prod/images/actual-final-dall-e-cosmo-cover-1655775574.png?resize=500:*' 
+        alt='actual-final-dall-e-cosmo-cover-1655775574'>
+    </body>
+</html>
+"
+                ></dangerous-html>
+              </div>
+            </div>
+            <div class="d-i-s-r-u-p-t-o-n-container09">
+              <span class="d-i-s-r-u-p-t-o-n-text116">
+                <span>
+                  Image Description: The World’s Smartest Artificial
+                  Intelligence
+                </span>
+                <span>Just Made Its First Magazine Cover</span>
+                <br />
+              </span>
+              <div class="d-i-s-r-u-p-t-o-n-container10">
+                <span class="d-i-s-r-u-p-t-o-n-text120">
+                  <span>
+                    Several companies have also been starting to utilize this
+                    technology for their design visualizations and marketing.
+                    With the launch of its Air Max Scorpion, Nike unlocked the
+                    future of AI-designed footwear. Designers at Nike also
+                    highlight that collaborating with AI Image Generators
+                    substantially moves forward the designing workflow by
+                    delivering efficiency, and productivity, and giving a
+                    different feel to artistic control (Taylor, 2022).
+                  </span>
+                  <br />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-i-s-r-u-p-t-o-n-div4">
+            <dangerous-html
+              html="<html>
+    <title> h3 </title>
+    <body>
+        <img src='https://hypebeast.com/image/2022/12/nike-sneakers-artificial-intelligence-ai-clothingdaily-viral-instagram-tiktok-4.jpg?resize=500:*' 
+        alt='nike-sneakers-artificial-intelligence-ai-clothingdaily-viral-instagram-tiktok-4'>
+    </body>
+</html>"
+            ></dangerous-html>
+          </div>
+          <span class="d-i-s-r-u-p-t-o-n-text123">
+            <span>
+              Image Description: Artificial Intelligence Designed These Dainty
+              Nike Sneakers
+            </span>
+            <br />
+          </span>
+          <span class="d-i-s-r-u-p-t-o-n-text126">
+            <span>
+              For the general public, generated AI tools are gaining more
+              traction. For example, Canva, a free online design platform
+              commonly used by more than 100 million individuals and businesses,
+              recently launched a text-to-image feature (powered by Stable
+              Diffusion). The availability of these AI features promises to
+              “empower users to create unique images and art from a simple
+              description in seconds” (Text to Image in Canva, 2022).
+              Consequently, these application gives the populace a whole new
+              ability to generate and produce art with massive comfort on their
+              end to meet their personal or commercial needs.
+            </span>
+            <br />
+            <br />
+          </span>
+        </div>
+        <div id="Positive Disruption" class="d-i-s-r-u-p-t-o-n-banner5">
+          <div class="d-i-s-r-u-p-t-o-n-container11">
+            <h1 class="d-i-s-r-u-p-t-o-n-text130">Positive Disruption</h1>
+          </div>
+          <div class="d-i-s-r-u-p-t-o-n-container12">
+            <span class="d-i-s-r-u-p-t-o-n-text131">
+              <span class="d-i-s-r-u-p-t-o-n-text132">
+                1. AI Improves/Changes Artists’ workflow
+              </span>
+              <br class="d-i-s-r-u-p-t-o-n-text133" />
+              <span>
+                Artificial Intelligence helps lessen the time needed to produce
+                work and is especially useful when an artist is bound by a time
+                crunch (AI Art Shop, 2022). With AI Image Generators, it only
+                takes a few parameters to have an artificially-engineered piece
+                whose components, symmetry, and accuracy are dependent on how
+                detailed the prompt is. The breakthrough of this technology and
+                its introduction to the public offers a new look and new
+                approach for the creative industry to try out. In a November
+                2022 article by California State University, a Bachelor of Fine
+                Arts student shared how they were able to come up with a
+                painting using a series of AI-generated artworks for
+                brainstorming and as references.
+              </span>
+              <br />
+              <span></span>
+              <span></span>
+            </span>
+            <span class="d-i-s-r-u-p-t-o-n-text138">
+              <span class="d-i-s-r-u-p-t-o-n-text139">
+                2. Low-cost Learning
+              </span>
+              <br />
+              <span>
+                For some people, pursuing art is a life calling. They cannot
+                simply detach themselves from it for the sake of practicality.
+                Treading this creative path can exhaust one’s resources because
+                opportunities and materials that can help improve and nurture
+                artistic skills tend to be expensive. And this is where AI can
+                be truly helpful in furthering aspiring artists’ learning
+                competencies. One only needs to have access to the internet and
+                a decent understanding of how the new technology works to
+                explore different art styles and mediums that they most resonate
+                with. Furthermore, there are a handful of free open-source AI
+                Image Generators that they can try out so they will be able to
+                experiment and discover new knowledge without notable hindering
+                constraints on their part.
+              </span>
+              <br />
+              <br />
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <span class="d-i-s-r-u-p-t-o-n-text146">
+            <span class="d-i-s-r-u-p-t-o-n-text147">
+              3. With AI, the Aesthetics of Art and People’s Knowledge of Art
+              History Will Expand
+            </span>
+            <br />
+            <span>
+              The development of AI Image generators opens a lot of
+              possibilities, especially for the creative industry. While there
+              is still no consensus reached regarding its ethical violations
+              accusations, and whether the outcome once its full potential is
+              unleashed will, end up being more destructive than helpful, it is
+              undeniable that AI generator tools are more than capable of
+              birthing a new art movement and expanding the aesthetics of art
+              for the better as it offers unique takes and new insights for the
+              creatives to learn from.
+            </span>
+            <br />
+            <br />
+            <span>
+              Additionally, users that want to get proficient at writing prompts
+              are also inevitably exposed to much deeper art history as they
+              determine which art styles should complement their AI-generated
+              image.
+            </span>
+            <br />
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="Negative Disruption" class="d-i-s-r-u-p-t-o-n-banner6">
+          <h1 class="d-i-s-r-u-p-t-o-n-text156">Negative Disruption</h1>
+          <span class="d-i-s-r-u-p-t-o-n-text157">
+            <span class="d-i-s-r-u-p-t-o-n-text158">
+              — AI Threatens the Livelihood of Digital Artists
+            </span>
+            <br />
+            <span>
+              Digital artists had always been held in lower regard compared to
+              traditional artists. This is due to some people associating
+              digital art with cheat codes and a handful of art enhancement
+              tools readily available online.
+            </span>
+            <br />
+            <br />
+            <span>
+              Unfortunately, with the introduction of AI image Generators, the
+              prejudice that digital artwork can be produced with just a few
+              clicks is further reinforced. This time, for real. Its
+              implications include more competition for artists when it comes to
+              art commissions, and even threatening some art professions to
+              become obsolete. While a study by Gu and Li (2020) shows that art
+              experts prefer traditionally made paintings by living artists over
+              AI-generated ones, and are likely to reject the latter once they
+              learned of its “creator’s” identity, it was also determined that
+              non-experts did not have a significant change in their liking
+              rating and purchase intent—showing indifference to the fact the
+              artworks are artificially-procured.
+            </span>
+            <br />
+            <br />
+          </span>
+        </div>
+        <div class="d-i-s-r-u-p-t-o-n-container13"></div>
+        <div class="d-i-s-r-u-p-t-o-n-section-separator"></div>
+        <footer class="d-i-s-r-u-p-t-o-n-footer">
+          <div class="d-i-s-r-u-p-t-o-n-footer-container">
+            <div class="d-i-s-r-u-p-t-o-n-logo1">
+              <a href="##Landing Page" class="d-i-s-r-u-p-t-o-n-link13">
+                <img
+                  alt="image"
+                  src="public/playground_assets/artboard%201-400w.png"
+                  class="d-i-s-r-u-p-t-o-n-image2"
+                />
+              </a>
+            </div>
+            <div class="d-i-s-r-u-p-t-o-n-group-information">
+              <span class="d-i-s-r-u-p-t-o-n-text166">GROUP J</span>
+              <span class="d-i-s-r-u-p-t-o-n-text167">
+                <span class="d-i-s-r-u-p-t-o-n-text168">MMS 142</span>
+                <br class="d-i-s-r-u-p-t-o-n-text169" />
+                <span class="d-i-s-r-u-p-t-o-n-text170">
+                  Internet Technologies
+                </span>
+                <br />
+              </span>
+            </div>
+            <div class="d-i-s-r-u-p-t-o-n-links-container">
+              <div class="d-i-s-r-u-p-t-o-n-members">
+                <div class="d-i-s-r-u-p-t-o-n-content-team">
+                  <div class="d-i-s-r-u-p-t-o-n-container14">
+                    <div class="d-i-s-r-u-p-t-o-n-container15">
+                      <div class="d-i-s-r-u-p-t-o-n-product-container">
+                        <span class="d-i-s-r-u-p-t-o-n-text172">
+                          Content Team
+                        </span>
+                        <li class="list-item">
+                          <span class="d-i-s-r-u-p-t-o-n-text173">
+                            Umali, Marianne
+                          </span>
+                        </li>
+                      </div>
+                      <li class="list-item">
+                        <span class="d-i-s-r-u-p-t-o-n-text174">
+                          Velo, Christian Paul
+                        </span>
+                      </li>
+                      <li class="d-i-s-r-u-p-t-o-n-li2 list-item">
+                        <span>Verzola, Pio Jr</span>
+                      </li>
+                      <li class="list-item">
+                        <span class="d-i-s-r-u-p-t-o-n-text176">
+                          Villanueva, Cyrille
+                        </span>
+                      </li>
+                      <li class="list-item">
+                        <span class="d-i-s-r-u-p-t-o-n-text177">
+                          Yango, Peter Samuel
+                        </span>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-i-s-r-u-p-t-o-n-website-team">
+                  <span class="d-i-s-r-u-p-t-o-n-text178">Website Team</span>
+                  <li class="list-item">
+                    <span class="d-i-s-r-u-p-t-o-n-text179">
+                      Timon, Patricia Mae
+                    </span>
+                  </li>
+                  <li class="d-i-s-r-u-p-t-o-n-li6 list-item">
+                    <span>
+                      <span>Tomacruz, Jana Denise</span>
+                      <br />
+                    </span>
+                  </li>
+                  <li class="list-item">
+                    <span class="d-i-s-r-u-p-t-o-n-text183">Torres, Aleah</span>
+                  </li>
+                  <div class="d-i-s-r-u-p-t-o-n-container16">
+                    <li class="list-item"></li>
+                    <span class="d-i-s-r-u-p-t-o-n-text184">
+                      Tupan, Charleigh Belle
+                    </span>
+                  </div>
+                  <div class="d-i-s-r-u-p-t-o-n-container17">
+                    <li class="list-item">
+                      <span class="d-i-s-r-u-p-t-o-n-text185">
+                        Yacat, Ma. Xenia
+                      </span>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-i-s-r-u-p-t-o-n-separator1"></div>
+          <div class="d-i-s-r-u-p-t-o-n-license">
+            <div class="d-i-s-r-u-p-t-o-n-container18">
+              <div class="d-i-s-r-u-p-t-o-n-container19">
+                <img
+                  alt="image"
+                  src="public/playground_assets/cc-200h.png"
+                  class="d-i-s-r-u-p-t-o-n-image3"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/person-200h.png"
+                  class="d-i-s-r-u-p-t-o-n-image4"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/share-200h.png"
+                  class="d-i-s-r-u-p-t-o-n-image5"
+                />
+                <img
+                  alt="image"
+                  src="public/playground_assets/commercial-200h.png"
+                  class="d-i-s-r-u-p-t-o-n-image6"
+                />
+              </div>
+            </div>
+          </div>
+          <span class="d-i-s-r-u-p-t-o-n-text186">School Year 2022 — 2023</span>
+          <span class="d-i-s-r-u-p-t-o-n-text187">1st Trimester</span>
+        </footer>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>
