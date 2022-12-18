@@ -20,7 +20,7 @@ The repository contains the GitHub page's code, project boards (for Content and 
 - Umali, Marianne
 - Velo, Christian Paul
 - Verzola, Pio Jr
-- Villanueva, Cyrille
+- Villanueva, Cyrille L.
 - Yacat, Ma. Xenia D.
 - Yango, Peter Samuel 
 
