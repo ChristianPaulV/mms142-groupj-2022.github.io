@@ -20,7 +20,7 @@ The web page was created in a 3840x2160 screen. As such, images may be wrongly d
 - Tomacruz, Jana Denise
 - Torres, Aleah
 - Tupan, Charleigh Belle O.
-- Umali, Marianne
+- Umali, Marianne S.
 - Velo, Christian Paul R.
 - Verzola, Pio Jr
 - Villanueva, Cyrille L.
